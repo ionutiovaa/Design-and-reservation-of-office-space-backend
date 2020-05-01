@@ -54,6 +54,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/users/createUser",
                         "/authenticate",
                         "/users/groups",
+                        "/clients/getClients",
+                        "/clients/createClient",
+                        "/clients/deleteClient/{nume}",
                         "/departaments/getDepartaments",
                         "/departaments/createDepartament",
                         "/departaments/deleteDepartament/{nume}")

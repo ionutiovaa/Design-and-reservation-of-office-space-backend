@@ -17,4 +17,8 @@ public interface DepartamentManagerRemote {
 
     DepartamentDTO findDepartamentByNume(String nume) throws BusinessException;
 
+    DepartamentDTO changeNumeResponsabil(DepartamentDTO departamentDTO) throws BusinessException;
+
+    DepartamentDTO changeNumeDepartament() throws BusinessException;
+
 }

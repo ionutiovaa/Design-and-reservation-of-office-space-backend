@@ -54,11 +54,14 @@ public class DepartamentManager implements DepartamentManagerRemote {
     @Override
     public DepartamentDTO deleteDepartamentByNume(String nume) throws Exception {
         Departament departament = departamentDao.findDepartamentByNume(nume);
-        if (departament != null) {
-            departamentDao.delete(departament);
-            return DepartamentDTOEntityMapper.getDTOFromDepartament(departament);
+        try{
+            if (departament != null){
+                departamentDao.delete(departament);
+            }
+        } catch (Exception e){
+            e.printStackTrace();
         }
-        return null;
+        return DepartamentDTOEntityMapper.getDTOFromDepartament(departament);
     }
 
     @Override

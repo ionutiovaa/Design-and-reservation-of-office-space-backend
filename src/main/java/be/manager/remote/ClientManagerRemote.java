@@ -14,7 +14,7 @@ public interface ClientManagerRemote {
 
     List<ClientDTO> findAllClients();
 
-    void deleteClientByNume(String nume) throws Exception;
+    ClientDTO deleteClientByNume(String nume) throws Exception;
 
     ClientDTO findClientById(Integer id) throws BusinessException;
 

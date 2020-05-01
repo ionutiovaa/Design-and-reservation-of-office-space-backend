@@ -7,8 +7,10 @@ import be.manager.remote.ClientManagerRemote;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.List;
@@ -41,7 +43,7 @@ public class ClientController {
         }
     }
 
-    //DE STERS
+    //O POT STERGE
     @GetMapping(path = "/getClientById/{id}", produces = "application/json")
     public String getClientById(@PathVariable("id") Integer id){
         try{
@@ -65,14 +67,16 @@ public class ClientController {
         }
     }
 
-    @PostMapping(path = "/deleteClient/{nume}", produces = "application/json")
-    public Response deleteClient(@PathVariable String nume) {
+    @DeleteMapping(path = "/deleteClient/{nume}", produces = "application/json")
+    public ResponseEntity<?> deleteClient(@PathVariable String nume) {
         try{
-            clientManagerRemote.deleteClientByNume(nume);
-            return Response.status(Response.Status.OK).build();
+            ClientDTO clientDTO = clientManagerRemote.deleteClientByNume(nume);
+            if (clientDTO.getID() != null)
+                return ResponseEntity.ok(HttpStatus.OK);
+            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } catch (Exception e){
             e.printStackTrace();
-            return Response.status(500).build();
+            return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 

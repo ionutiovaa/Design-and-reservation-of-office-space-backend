@@ -45,19 +45,17 @@ public class ClientManager implements ClientManagerRemote {
     }
 
     @Override
-    public void deleteClientByNume(String nume) throws Exception {
+    public ClientDTO deleteClientByNume(String nume) throws Exception {
         Client client = clientDao.findClientByNume(nume);
-        clientDao.delete(client);
-
+        try{
+            if (client != null){
+                clientDao.delete(client);
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return ClientDTOEntityMapper.getDTOFromClient(client);
     }
-
-    /*@Override
-    public void deleteClient(ClientDTO clientDTO) throws Exception {
-        Client client = ClientDTOEntityMapper.getClientFromClientDTO(clientDTO);
-        clientDao.delete(client);
-        //ClientDTO clientDTOToReturn = ClientDTOEntityMapper.getDTOFromClient(client);
-        //return clientDTOToReturn;
-    }*/
 
     @Override
     public ClientDTO findClientById(Integer id) throws BusinessException {

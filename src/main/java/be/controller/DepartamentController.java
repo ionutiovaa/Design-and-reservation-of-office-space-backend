@@ -5,6 +5,7 @@ import be.exceptions.BusinessException;
 import be.manager.remote.DepartamentManagerRemote;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,20 +35,25 @@ public class DepartamentController {
     public ResponseEntity<?> saveDepartament(@RequestBody DepartamentDTO departamentDTO){
         try{
             DepartamentDTO departament = departamentManagerRemote.insertDepartament(departamentDTO);
-            return ResponseEntity.ok(departament);
+            if (departament != null) {
+                return ResponseEntity.ok(departament);
+            }
+            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } catch (BusinessException e){
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 
-    @PostMapping(path = "/deleteDepartament/{nume}", produces = "application/json")
-    public Response deleteDepartament(@PathVariable String nume) {
+    @DeleteMapping(path = "/deleteDepartament/{nume}", produces = "application/json")
+    public ResponseEntity<?> deleteDepartament(@PathVariable String nume) {
         try{
-            departamentManagerRemote.deleteDepartamentByNume(nume);
-            return Response.status(Response.Status.OK).build();
+            DepartamentDTO departamentDTO = departamentManagerRemote.deleteDepartamentByNume(nume);
+            if (departamentDTO.getID() != null)
+                return ResponseEntity.ok(HttpStatus.OK);
+            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } catch (Exception e){
             e.printStackTrace();
-            return Response.status(500).build();
+            return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 

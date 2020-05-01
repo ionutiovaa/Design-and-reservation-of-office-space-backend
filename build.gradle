@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'Licentabe'
-version '1.0-SNAPSHOT'c
+version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
@@ -26,7 +26,9 @@ dependencies {
     //implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.security:spring-security-test'
+    
+    //implementation 'org.springframework.security:spring-security-test'
+    
 
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
@@ -65,6 +67,10 @@ dependencies {
 
     testCompile 'org.glassfish.jersey.core:jersey-common:2.22.2'
 
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-server
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.27'
+
+
 
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent
     //compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.2.6.RELEASE', ext: 'pom'
@@ -80,6 +86,17 @@ dependencies {
 
     // https://mvnrepository.com/artifact/javax/javaee-api
     compile group: 'javax', name: 'javaee-api', version: '8.0'
+
+    
+    
+    
+    
+    // https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api
+    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'
+
+    
+    
+    
 
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.2.1.RELEASE'
