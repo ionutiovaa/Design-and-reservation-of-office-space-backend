@@ -8,10 +8,12 @@ import be.entity.User;
 import be.exceptions.BusinessException;
 import be.manager.remote.UserManagerRemote;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.logging.Logger;
 
+@Component
 public class UserManager implements UserManagerRemote {
 
     @Autowired

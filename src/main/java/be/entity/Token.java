@@ -2,6 +2,7 @@ package be.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "tokens")
@@ -18,12 +19,16 @@ public class Token implements Serializable {
     @Column(name = "username")
     private String username;
 
+    @Column(name = "expiration")
+    private Date expiration;
+
     @Override
     public String toString() {
         return "Token{" +
                 "ID=" + ID +
                 ", token='" + token + '\'' +
                 ", username='" + username + '\'' +
+                ", expiration=" + expiration +
                 '}';
     }
 
@@ -53,6 +58,22 @@ public class Token implements Serializable {
 
     public Token() {
     }
+
+    public Date getExpiration() {
+        return expiration;
+    }
+
+    public void setExpiration(Date expiration) {
+        this.expiration = expiration;
+    }
+
+    public Token(String token, String username, Date expiration) {
+        this.token = token;
+        this.username = username;
+        this.expiration = expiration;
+    }
+
+
 
     public Token(String token, String username) {
         this.token = token;

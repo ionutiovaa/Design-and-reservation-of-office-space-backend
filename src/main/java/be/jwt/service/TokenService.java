@@ -1,3 +1,4 @@
+/*
 package be.jwt.service;
 
 import be.dao.TokenDao;
@@ -26,11 +27,15 @@ public class TokenService {
     public String login(TokenDTO tokenDTO){
         String username = tokenDTO.getUsername();
         //Optional tokenFound = tokenDao.login(username);
-        Token tokenFound = tokenDao.login(username);
         String password = tokenDTO.getPassword();
         be.entity.User user = userDao.findUserByUsernameAndPassword(username, password);
 
-        if (user != null/* && tokenFound.isPresent()*/){
+        if (user != null*/
+/* && tokenFound.isPresent()*//*
+){
+            Token tokenFound = tokenDao.login(username);
+
+            
             String token = UUID.randomUUID().toString();
             Token tokenFounded = TokenDTOEntityMapper.getTokenFromTokenDTO(tokenDTO);
             Token tokenToSave = tokenDao.findByUsername(tokenFounded.getUsername());
@@ -63,3 +68,4 @@ public class TokenService {
         return tokenDao.findByID(id);
     }
 }
+*/

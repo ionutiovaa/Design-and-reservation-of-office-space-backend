@@ -1,3 +1,4 @@
+/*
 package be.jwt.config;
 
 import be.jwt.service.TokenService;
@@ -38,3 +39,4 @@ public class AuthenticationProvider extends AbstractUserDetailsAuthenticationPro
         throw new UsernameNotFoundException("Cannot find user with authentication token=" + token);
     }
 }
+*/

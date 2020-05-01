@@ -15,6 +15,11 @@ public class TokenDTO implements Serializable {
         this.password = password;
     }
 
+    public TokenDTO(String token, String username) {
+        this.token = token;
+        this.username = username;
+    }
+
     public TokenDTO() {
     }
 

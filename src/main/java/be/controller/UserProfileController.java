@@ -1,3 +1,4 @@
+/*
 package be.controller;
 
 import be.entity.Token;
@@ -19,3 +20,4 @@ public class UserProfileController {
     }
 
 }
+*/

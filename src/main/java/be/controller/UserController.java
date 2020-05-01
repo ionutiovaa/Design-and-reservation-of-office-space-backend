@@ -1,4 +1,3 @@
-/*
 package be.controller;
 
 import be.dto.ChangePasswordDTO;
@@ -23,10 +22,8 @@ public class UserController extends HttpServlet {
     @Autowired
     public UserManagerRemote userManagerRemote;
 
-    */
-/*public UserController() {
-    }*//*
-
+    public UserController() {
+    }
 
     public UserController(UserManagerRemote userManagerRemote){
         this.userManagerRemote = userManagerRemote;
@@ -75,4 +72,3 @@ public class UserController extends HttpServlet {
     }
 
 }
-*/

@@ -1,3 +1,4 @@
+/*
 package be.controller;
 
 import be.dto.TokenDTO;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/login")
+@RequestMapping(path = "/login2")
 public class TokenController {
 
     @Autowired
@@ -29,12 +30,15 @@ public class TokenController {
         return ResponseEntity.accepted().body(tokenToReturn);
     }
 
-    /*@PostMapping(path = "/token")
+    */
+/*@PostMapping(path = "/token")
     public String getToken(@RequestBody TokenDTO tokenDTO){
         String token= tokenService.login(tokenDTO);
         if(StringUtils.isEmpty(token)){
             return "NotFound";
         }
         return token;
-    }*/
+    }*//*
+
 }
+*/
