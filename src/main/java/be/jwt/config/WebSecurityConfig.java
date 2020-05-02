@@ -64,7 +64,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/departaments/createDepartament",
                         "/departaments/deleteDepartament/{nume}",
                         "/departaments/updateDepartament",
-                        "/departaments/updateResponsabil"
+                        "/departaments/updateResponsabil",
+                        "/proiects/getProiects",
+                        "/proiects/createProiect",
+                        "/proiects/deleteProiect/{nume}",
+                        "/proiects/updateProiect",
+                        "/proiects/updateClientProiect",
+                        "/proiects/updateDepartamentProiect"
 
                 )
                 .permitAll()

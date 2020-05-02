@@ -31,10 +31,10 @@ public class DepartamentDTOEntityMapper {
         return departamentDTO;
     }
 
-    public static List<DepartamentDTO> getAllClients(List<Departament> departaments){
-        List<DepartamentDTO> clientDTOList = new ArrayList<>();
-        departaments.forEach(departament -> clientDTOList.add(getDTOFromDepartament(departament)));
-        return clientDTOList;
+    public static List<DepartamentDTO> getAllDepartaments(List<Departament> departaments){
+        List<DepartamentDTO> departamentDTOList = new ArrayList<>();
+        departaments.forEach(departament -> departamentDTOList.add(getDTOFromDepartament(departament)));
+        return departamentDTOList;
     }
 
     public static DepartamentDTO getDTOAfterUpdateNume(Departament departament){

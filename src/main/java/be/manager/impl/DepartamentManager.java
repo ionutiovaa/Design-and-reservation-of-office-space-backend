@@ -52,7 +52,7 @@ public class DepartamentManager implements DepartamentManagerRemote {
     @Override
     public List<DepartamentDTO> findAllDepartaments() {
         List<Departament> departaments = departamentDao.findAll();
-        return DepartamentDTOEntityMapper.getAllClients(departaments);
+        return DepartamentDTOEntityMapper.getAllDepartaments(departaments);
     }
 
     @Override
