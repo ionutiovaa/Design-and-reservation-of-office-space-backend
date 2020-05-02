@@ -54,12 +54,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/users/createUser",
                         "/authenticate",
                         "/users/groups",
+                        "/users/createUser",
+                        "/users/getUsers",
                         "/clients/getClients",
                         "/clients/createClient",
                         "/clients/deleteClient/{nume}",
+                        "/clients/updateClient",
                         "/departaments/getDepartaments",
                         "/departaments/createDepartament",
-                        "/departaments/deleteDepartament/{nume}")
+                        "/departaments/deleteDepartament/{nume}",
+                        "/departaments/updateDepartament",
+                        "/departaments/updateResponsabil"
+
+                )
                 .permitAll()
                 // all other requests need to be authenticated
                 .anyRequest().authenticated().and()

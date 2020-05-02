@@ -1,5 +1,7 @@
 package be.controller;
 
+import be.dto.ChangeDepartamentDTO;
+import be.dto.ChangeResponsabilDepartamentDTO;
 import be.dto.DepartamentDTO;
 import be.exceptions.BusinessException;
 import be.manager.remote.DepartamentManagerRemote;
@@ -9,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.List;
 
@@ -35,10 +36,14 @@ public class DepartamentController {
     public ResponseEntity<?> saveDepartament(@RequestBody DepartamentDTO departamentDTO){
         try{
             DepartamentDTO departament = departamentManagerRemote.insertDepartament(departamentDTO);
-            if (departament != null) {
+            if (departament == null)
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            if (departament.getID() == null)
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This departament already exists.");
+            if (departament.getID() != null) {
                 return ResponseEntity.ok(departament);
             }
-            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            else return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         } catch (BusinessException e){
             return ResponseEntity.status(500).body(e.getMessage());
         }
@@ -52,6 +57,32 @@ public class DepartamentController {
                 return ResponseEntity.ok(HttpStatus.OK);
             else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } catch (Exception e){
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
+    @PostMapping(path = "/updateDepartament", produces = "application/json")
+    public ResponseEntity<?> updateDepartament(@RequestBody ChangeDepartamentDTO changeDepartamentDTO){
+        try{
+            DepartamentDTO updatedDepartament = departamentManagerRemote.changeNumeDepartament(changeDepartamentDTO);
+            if (updatedDepartament == null)
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.ok(updatedDepartament);
+        } catch (BusinessException e){
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
+    @PostMapping(path = "/updateResponsabil", produces = "application/json")
+    public ResponseEntity<?> updateResponsabil(@RequestBody ChangeResponsabilDepartamentDTO changeResponsabilDepartamentDTO){
+        try{
+            DepartamentDTO updatedDepartament = departamentManagerRemote.changeNumeResponsabil(changeResponsabilDepartamentDTO);
+            if (updatedDepartament != null)
+                return ResponseEntity.ok(updatedDepartament);
+            else return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } catch (BusinessException e){
             e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }

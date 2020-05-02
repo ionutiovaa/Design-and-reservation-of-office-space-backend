@@ -37,4 +37,18 @@ public class DepartamentDTOEntityMapper {
         return clientDTOList;
     }
 
+    public static DepartamentDTO getDTOAfterUpdateNume(Departament departament){
+        DepartamentDTO departamentDTO = getDTOFromDepartament(departament);
+        if (departamentDTO != null)
+            departamentDTO.setNume(departament.getNume());
+        return departamentDTO;
+    }
+
+    public static DepartamentDTO getDTOAfterUpdateResponsabil(Departament departament){
+        DepartamentDTO departamentDTO = getDTOFromDepartament(departament);
+        if (departamentDTO != null)
+            departamentDTO.setUser_responsabil(UserDTOEntityMapper.getDTOFromUser(departament.getUser()));
+        return departamentDTO;
+    }
+
 }

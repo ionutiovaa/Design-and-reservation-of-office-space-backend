@@ -43,5 +43,5 @@ public interface DepartamentDao extends CrudRepository<Departament, Integer> {
             "SET id_responsabil = :newId " +
             "WHERE ID = :departamentID")
     int updateResponsabilDepartament(@Param("departamentID") Integer departamentID,
-                                    @Param("newId") String newId);
+                                    @Param("newId") Integer newId);
 }

@@ -2,6 +2,8 @@ package be.manager.impl;
 
 import be.dao.DepartamentDao;
 import be.dao.UserDao;
+import be.dto.ChangeDepartamentDTO;
+import be.dto.ChangeResponsabilDepartamentDTO;
 import be.dto.DepartamentDTO;
 import be.dtoEntityMappers.DepartamentDTOEntityMapper;
 import be.entity.Departament;
@@ -33,16 +35,18 @@ public class DepartamentManager implements DepartamentManagerRemote {
     @Override
     public DepartamentDTO insertDepartament(DepartamentDTO departamentDTO) throws BusinessException {
         User user = userDao.findUserByUsername(departamentDTO.getUser_responsabil().getUsername());
-        if (user != null){
-            Departament departament = new Departament();
+        Departament departament = departamentDao.findDepartamentByNume(departamentDTO.getNume());
+        DepartamentDTO dtoPersisted = new DepartamentDTO();
+        if (user == null)
+            return null;
+        if (departament == null){
+            departament = new Departament();
             departament.setNume(departamentDTO.getNume());
             departament.setUser(user);
             Departament persistedDepartament = departamentDao.save(departament);
-            DepartamentDTO dtoPersisted = DepartamentDTOEntityMapper.getDTOFromDepartament(persistedDepartament);
-            return dtoPersisted;
+            dtoPersisted = DepartamentDTOEntityMapper.getDTOFromDepartament(persistedDepartament);
         }
-
-        return null;
+        return dtoPersisted;
     }
 
     @Override
@@ -69,5 +73,34 @@ public class DepartamentManager implements DepartamentManagerRemote {
         Departament departament = departamentDao.findDepartamentByNume(nume);
         DepartamentDTO departamentDTO = DepartamentDTOEntityMapper.getDTOFromDepartament(departament);
         return departamentDTO;
+    }
+
+    @Override
+    public DepartamentDTO changeNumeResponsabil(ChangeResponsabilDepartamentDTO changeResponsabilDepartamentDTO) throws BusinessException {
+        Departament departament = departamentDao.findDepartamentByNume(changeResponsabilDepartamentDTO.getNume());
+        User user = userDao.findUserByUsername(changeResponsabilDepartamentDTO.getOldResponsabil());
+        User newResponsabil = userDao.findUserByUsername(changeResponsabilDepartamentDTO.getNewResponsabil());
+        if (departament != null && user != null && newResponsabil != null){
+            int updated = departamentDao.updateResponsabilDepartament(departament.getID(), newResponsabil.getID());
+            departament.setUser(newResponsabil);
+            return DepartamentDTOEntityMapper.getDTOAfterUpdateResponsabil(departament);
+        }
+        else
+            //throw new BusinessException("Name error", "The old name is wrong");
+            return null;
+    }
+
+    @Override
+    public DepartamentDTO changeNumeDepartament(ChangeDepartamentDTO changeDepartamentDTO) throws BusinessException {
+        Departament departament = departamentDao.findDepartamentByNume(changeDepartamentDTO.getOldNume());
+        if (departament == null)
+            return null;
+        if (departament.getNume().equals(changeDepartamentDTO.getOldNume())){
+            departament.setNume(changeDepartamentDTO.getNewNume());
+            int updated = departamentDao.updateNumeDepartament(departament.getID(), departament.getNume());
+            return DepartamentDTOEntityMapper.getDTOAfterUpdateNume(departament);
+        }
+        else
+            throw new BusinessException("Name error", "The old name is wrong");
     }
 }

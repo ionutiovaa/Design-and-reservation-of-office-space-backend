@@ -37,7 +37,9 @@ public class ClientController {
     public ResponseEntity<?> saveClient(@RequestBody ClientDTO clientDTO){
         try{
             ClientDTO client = clientManagerRemote.insertClient(clientDTO);
-            return ResponseEntity.ok(client);
+            if (client.getID() != null)
+                return ResponseEntity.ok(client);
+            else return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This client already exists.");
         } catch (BusinessException e){
             return ResponseEntity.status(500).body(e.getMessage());
         }
@@ -84,6 +86,8 @@ public class ClientController {
     public ResponseEntity<?> updateClient(@RequestBody ChangeClientDTO changeClientDTO){
         try{
             ClientDTO updatedClient = clientManagerRemote.updateClient(changeClientDTO);
+            if (updatedClient == null)
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             return ResponseEntity.ok(updatedClient);
         } catch (BusinessException e){
             e.printStackTrace();

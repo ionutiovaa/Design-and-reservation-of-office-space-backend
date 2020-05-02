@@ -28,7 +28,11 @@ public class ClientManager implements ClientManagerRemote {
     @Override
     public ClientDTO insertClient(ClientDTO clientDTO) throws BusinessException {
         Client client = createClientToInsert(clientDTO);
-        Client persisted = this.clientDao.save(client);
+        Client clientFinded = clientDao.findClientByNume(clientDTO.getNume());
+        Client persisted = null;
+        if (clientFinded == null){
+            persisted = this.clientDao.save(client);
+        }
         ClientDTO dtoPersisted = ClientDTOEntityMapper.getDTOFromClient(persisted);
         return dtoPersisted;
     }
@@ -73,11 +77,12 @@ public class ClientManager implements ClientManagerRemote {
 
     @Override
     public ClientDTO updateClient(ChangeClientDTO changeClientDTO) throws BusinessException {
-        Client client = this.clientDao.findAllByID(changeClientDTO.getClientId());
+        Client client = this.clientDao.findClientByNume(changeClientDTO.getOldNume());
+        if (client == null)
+            return null;
         if (client.getNume().equals(changeClientDTO.getOldNume())){
-            //Change nume;
             client.setNume(changeClientDTO.getNewNume());
-            int updated = this.clientDao.updateNumeClient(changeClientDTO.getClientId(), changeClientDTO.getNewNume());
+            int updated = this.clientDao.updateNumeClient(client.getID(), client.getNume());
             return ClientDTOEntityMapper.getDTOAfterUpdateNume(client);
         }
         else
