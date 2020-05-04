@@ -1,29 +1,17 @@
-package be.entity;
+package be.dto;
 
-import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-@Table(name = "echipa")
-public class Echipa implements Serializable {
+public class EchipaDTO implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
     private Integer ID;
-
-    @Column(name = "nume")
     private String nume;
-
-    @ManyToMany
-    //@JoinTable(joinColumns = "")
-    private Set<Proiect> proiecte = new HashSet<>();
+    private Set<ProiectDTO> proiecte;
 
     @Override
     public String toString() {
-        return "Echipa{" +
+        return "EchipaDTO{" +
                 "ID=" + ID +
                 ", nume='" + nume + '\'' +
                 ", proiecte=" + proiecte +
@@ -46,18 +34,19 @@ public class Echipa implements Serializable {
         this.nume = nume;
     }
 
-    public Set<Proiect> getProiecte() {
+    public Set<ProiectDTO> getProiecte() {
         return proiecte;
     }
 
-    public void setProiecte(Set<Proiect> proiecte) {
+    public void setProiecte(Set<ProiectDTO> proiecte) {
         this.proiecte = proiecte;
     }
 
-    public Echipa() {
+    public EchipaDTO() {
     }
 
-    public Echipa(String nume, Set<Proiect> proiecte) {
+    public EchipaDTO(Integer ID, String nume, Set<ProiectDTO> proiecte) {
+        this.ID = ID;
         this.nume = nume;
         this.proiecte = proiecte;
     }

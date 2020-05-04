@@ -4,7 +4,9 @@ import be.dto.ProiectDTO;
 import be.entity.Proiect;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ProiectDTOEntityMapper {
 
@@ -58,6 +60,18 @@ public class ProiectDTOEntityMapper {
         if (proiectDTO != null)
             proiectDTO.setDepartament(DepartamentDTOEntityMapper.getDTOFromDepartament(proiect.getDepartament()));
         return proiectDTO;
+    }
+
+    public static Set<Proiect> getProiectSetFromDTO(Set<ProiectDTO> proiectDTOSet){
+        Set<Proiect> proiecte = new HashSet<>();
+        proiectDTOSet.forEach(proiectDTO -> proiecte.add(getProiectFromProiectDTO(proiectDTO)));
+        return proiecte;
+    }
+
+    public static Set<ProiectDTO> getProiectDTOSetFromProiect(Set<Proiect> proiectSet){
+        Set<ProiectDTO> proiectDTOSet = new HashSet<>();
+        proiectSet.forEach(proiect -> proiectDTOSet.add(getDTOFromProiect(proiect)));
+        return proiectDTOSet;
     }
 
 }

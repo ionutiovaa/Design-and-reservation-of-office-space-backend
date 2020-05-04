@@ -41,7 +41,7 @@ public class ProiectManager implements ProiectManagerRemote {
         if (proiect != null)
             return null;
         ProiectDTO dtoPersisted = new ProiectDTO();
-        if (client != null && departament != null && proiect == null){
+        if (client != null && departament != null){
             proiect = new Proiect();
             proiect.setNume(proiectDTO.getNume());
             proiect.setClient(client);
