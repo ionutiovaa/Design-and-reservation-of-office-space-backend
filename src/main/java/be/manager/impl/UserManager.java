@@ -1,9 +1,14 @@
 package be.manager.impl;
 
+import be.dao.EchipaDao;
 import be.dao.UserDao;
+import be.dto.AddUserToEchipaDTO;
 import be.dto.ChangePasswordDTO;
+import be.dto.EchipaDTO;
 import be.dto.UserDTO;
+import be.dtoEntityMappers.EchipaDTOEntityMapper;
 import be.dtoEntityMappers.UserDTOEntityMapper;
+import be.entity.Echipa;
 import be.entity.User;
 import be.exceptions.BusinessException;
 import be.manager.remote.UserManagerRemote;
@@ -11,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 @Component
@@ -18,6 +24,9 @@ public class UserManager implements UserManagerRemote {
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private EchipaDao echipaDao;
 
     public UserDao getUserDao() {
         return userDao;
@@ -34,7 +43,7 @@ public class UserManager implements UserManagerRemote {
     }
 
     private User createUserToInsert(UserDTO userDTO){
-        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getMobileNumber(), userDTO.getEmail(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getEchipe());
+        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getMobileNumber(), userDTO.getEmail(), userDTO.getUsername(), userDTO.getPassword(), EchipaDTOEntityMapper.getAllEchipeSetFromDTO(userDTO.getEchipe()));
         return user;
     }
 
@@ -73,5 +82,19 @@ public class UserManager implements UserManagerRemote {
             return UserDTOEntityMapper.getDTOCompleteFromUser(user);
         }
         else throw new BusinessException("Password error", "The old password is wrong");
+    }
+
+    @Override
+    public EchipaDTO addUserToEchipa(AddUserToEchipaDTO addUserToEchipaDTO) throws BusinessException {
+        User user = userDao.findUserByUsername(addUserToEchipaDTO.getUsername());
+        Echipa echipa = echipaDao.findEchipaByNume(addUserToEchipaDTO.getNumeEchipa());
+        if (user == null || echipa == null)
+            return null;
+        Set<User> users = echipa.getUsers();
+        users.add(user);
+        echipa.setUsers(users);
+        echipaDao.save(echipa);
+        EchipaDTO dtoPersisted = EchipaDTOEntityMapper.getDTOFromEchipa(echipa);
+        return dtoPersisted;
     }
 }

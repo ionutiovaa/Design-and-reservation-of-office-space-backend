@@ -41,6 +41,18 @@ public class EchipaDTOEntityMapper {
         return echipaDTOList;
     }
 
+    public static Set<Echipa> getAllEchipeSetFromDTO(Set<EchipaDTO> echipaDTOSet){
+        Set<Echipa> echipaSet = new HashSet<>();
+        echipaDTOSet.forEach(echipaDTO -> echipaSet.add(getEhipaFromEchipaDTO(echipaDTO)));
+        return echipaSet;
+    }
+
+    public static Set<EchipaDTO> getAllEchipeDTOSetFromEchipe(Set<Echipa> echipaSet){
+        Set<EchipaDTO> echipaDTOSet = new HashSet<>();
+        echipaSet.forEach(echipa -> echipaDTOSet.add(getDTOFromEchipa(echipa)));
+        return echipaDTOSet;
+    }
+
     public static EchipaDTO getDTOAfterUpdateNume(Echipa echipa){
         EchipaDTO echipaDTO = getDTOFromEchipa(echipa);
         if (echipaDTO != null)

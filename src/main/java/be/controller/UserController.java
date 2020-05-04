@@ -1,6 +1,8 @@
 package be.controller;
 
+import be.dto.AddUserToEchipaDTO;
 import be.dto.ChangePasswordDTO;
+import be.dto.EchipaDTO;
 import be.dto.UserDTO;
 import be.exceptions.BusinessException;
 import be.manager.remote.UserManagerRemote;
@@ -8,6 +10,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.ws.rs.core.Response;
@@ -68,6 +71,19 @@ public class UserController extends HttpServlet {
             return jsonTransformer.writeValueAsString(userDTO);
         } catch (BusinessException | JsonProcessingException e){
             return null;
+        }
+    }
+
+    @PostMapping(path = "/addUserToEchipa", produces = "application/json")
+    public ResponseEntity<?> addUserToEchipa(@RequestBody AddUserToEchipaDTO addUserToEchipaDTO){
+        try{
+            EchipaDTO updatedEchipa = userManagerRemote.addUserToEchipa(addUserToEchipaDTO);
+            if (updatedEchipa != null)
+                return ResponseEntity.ok(updatedEchipa);
+            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } catch (BusinessException e){
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 

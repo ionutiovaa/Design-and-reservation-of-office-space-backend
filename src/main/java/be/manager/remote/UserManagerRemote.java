@@ -1,6 +1,8 @@
 package be.manager.remote;
 
+import be.dto.AddUserToEchipaDTO;
 import be.dto.ChangePasswordDTO;
+import be.dto.EchipaDTO;
 import be.dto.UserDTO;
 import be.exceptions.BusinessException;
 import org.springframework.stereotype.Component;
@@ -21,5 +23,7 @@ public interface UserManagerRemote {
     UserDTO findUserByUsernameAndPassword(String username, String password) throws BusinessException;
 
     UserDTO changePassword(ChangePasswordDTO changePasswordDTO) throws BusinessException;
+
+    EchipaDTO addUserToEchipa(AddUserToEchipaDTO addUserToEchipaDTO) throws BusinessException;
 
 }

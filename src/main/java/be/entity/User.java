@@ -34,7 +34,7 @@ public class User implements Serializable {
     @Column(name = "password")
     private String password;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL)
     private Set<Echipa> echipe = new HashSet<>();
 
     @Column(name = "userType")
@@ -118,6 +118,14 @@ public class User implements Serializable {
 
     public void setEchipe(Set<Echipa> echipe) {
         this.echipe = echipe;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 
     public User() {

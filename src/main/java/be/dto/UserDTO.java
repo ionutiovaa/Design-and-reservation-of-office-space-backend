@@ -1,6 +1,5 @@
 package be.dto;
 
-import be.entity.Echipa;
 import be.entity.types.UserType;
 
 import java.io.Serializable;
@@ -19,7 +18,7 @@ public class UserDTO implements Serializable {
     private String username;
     private String password;
     private UserType userType;
-    private Set<Echipa> echipe;
+    private Set<EchipaDTO> echipe;
 
     public UserDTO() {
     }
@@ -33,6 +32,18 @@ public class UserDTO implements Serializable {
         this.password = password;
         this.userType = userType;
         this.echipe = new HashSet<>();
+    }
+
+    public UserDTO(Integer ID, String firstName, String lastName, String mobileNumber, String email, String username, String password, UserType userType, Set<EchipaDTO> echipe) {
+        this.ID = ID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mobileNumber = mobileNumber;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.userType = userType;
+        this.echipe = echipe;
     }
 
     public String getToken() {
@@ -107,11 +118,11 @@ public class UserDTO implements Serializable {
         this.userType = userType;
     }
 
-    public Set<Echipa> getEchipe() {
+    public Set<EchipaDTO> getEchipe() {
         return echipe;
     }
 
-    public void setEchipe(Set<Echipa> echipe) {
+    public void setEchipe(Set<EchipaDTO> echipe) {
         this.echipe = echipe;
     }
 

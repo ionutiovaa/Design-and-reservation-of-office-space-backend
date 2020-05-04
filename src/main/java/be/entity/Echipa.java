@@ -23,12 +23,27 @@ public class Echipa implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "proiecte_id"))
     private Set<Proiect> proiecte = new HashSet<>();
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "users_echipe",
+            joinColumns = @JoinColumn(name = "echipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private Set<User> users = new HashSet<>();
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+
     @Override
     public String toString() {
         return "Echipa{" +
                 "ID=" + ID +
                 ", nume='" + nume + '\'' +
                 ", proiecte=" + proiecte +
+                ", users=" + users +
                 '}';
     }
 
@@ -59,8 +74,9 @@ public class Echipa implements Serializable {
     public Echipa() {
     }
 
-    public Echipa(String nume, Set<Proiect> proiecte) {
+    public Echipa(String nume, Set<Proiect> proiecte, Set<User> users) {
         this.nume = nume;
         this.proiecte = proiecte;
+        this.users = users;
     }
 }

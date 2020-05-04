@@ -1,14 +1,23 @@
 package be.dtoEntityMappers;
 
 import be.dto.UserDTO;
+import be.entity.Echipa;
 import be.entity.User;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class UserDTOEntityMapper {
 
     private UserDTOEntityMapper(){}
+
+    public static Set<User> getUserSetFromDTO(Set<UserDTO> userDTOS){
+        Set<User> users = new HashSet<>();
+        userDTOS.forEach(userDTO -> users.add(getUserFromUserDTO(userDTO)));
+        return users;
+    }
 
     public static User getUserFromUserDTO(UserDTO userDTO){
         User user = new User();
@@ -20,7 +29,8 @@ public class UserDTOEntityMapper {
             user.setMobileNumber(userDTO.getMobileNumber());
             user.setUsername(userDTO.getUsername());
             user.setPassword(userDTO.getPassword());
-            user.setEchipe(userDTO.getEchipe());
+            //user.setEchipe(userDTO.getEchipe());
+            user.setEchipe(EchipaDTOEntityMapper.getAllEchipeSetFromDTO(userDTO.getEchipe()));
         }
         return user;
     }
@@ -35,7 +45,8 @@ public class UserDTOEntityMapper {
             userDTO.setEmail(user.getEmail());
             userDTO.setUsername(user.getUsername());
             userDTO.setPassword(user.getPassword());
-            userDTO.setEchipe(user.getEchipe());
+            userDTO.setEchipe(EchipaDTOEntityMapper.getAllEchipeDTOSetFromEchipe(user.getEchipe()));
+            //userDTO.setEchipe(user.getEchipe());
         }
         return userDTO;
     }
