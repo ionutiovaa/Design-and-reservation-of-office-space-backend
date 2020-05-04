@@ -48,4 +48,13 @@ public class EchipaDTOEntityMapper {
         return echipaDTO;
     }
 
+    /*public static EchipaDTO getDTOAfterInsertProiect(Echipa echipa){
+        EchipaDTO echipaDTO = getDTOFromEchipa(echipa);
+        Set<ProiectDTO> proiectDTOSet = new HashSet<>();
+        echipa.getProiecte().forEach(proiect -> proiectDTOSet.add(ProiectDTOEntityMapper.getDTOFromProiect(proiect)));
+        if (echipaDTO != null)
+            echipaDTO.setProiecte(proiectDTOSet);
+        return echipaDTO;
+    }*/
+
 }

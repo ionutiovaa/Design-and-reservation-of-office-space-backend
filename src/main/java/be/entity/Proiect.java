@@ -2,6 +2,8 @@ package be.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "proiecte")
@@ -23,6 +25,9 @@ public class Proiect implements Serializable {
     @JoinColumn(name = "id_departament", referencedColumnName = "ID")
     private Departament departament;
 
+    @ManyToMany(mappedBy = "proiecte", cascade = CascadeType.ALL)
+    private Set<Echipa> echipe = new HashSet<>();
+
     @Override
     public String toString() {
         return "Proiect{" +
@@ -30,6 +35,7 @@ public class Proiect implements Serializable {
                 ", nume='" + nume + '\'' +
                 ", client=" + client +
                 ", departament=" + departament +
+                ", echipe=" + echipe +
                 '}';
     }
 
@@ -65,6 +71,14 @@ public class Proiect implements Serializable {
         this.departament = departament;
     }
 
+    public Set<Echipa> getEchipe() {
+        return echipe;
+    }
+
+    public void setEchipe(Set<Echipa> echipe) {
+        this.echipe = echipe;
+    }
+
     public Proiect() {
     }
 
@@ -72,5 +86,12 @@ public class Proiect implements Serializable {
         this.nume = nume;
         this.client = client;
         this.departament = departament;
+    }
+
+    public Proiect(String nume, Client client, Departament departament, Set<Echipa> echipe) {
+        this.nume = nume;
+        this.client = client;
+        this.departament = departament;
+        this.echipe = echipe;
     }
 }

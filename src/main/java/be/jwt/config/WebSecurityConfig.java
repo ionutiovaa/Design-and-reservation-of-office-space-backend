@@ -70,7 +70,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/proiects/deleteProiect/{nume}",
                         "/proiects/updateProiect",
                         "/proiects/updateClientProiect",
-                        "/proiects/updateDepartamentProiect"
+                        "/proiects/updateDepartamentProiect",
+                        "/proiects/addProiectToEchipa",
+                        "/echipe/getEchipe",
+                        "/echipe/createEchipa",
+                        "/echipe/deleteEchipa/{nume}",
+                        "/echipe/updateEchipa"
 
                 )
                 .permitAll()
