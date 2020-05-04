@@ -1,9 +1,6 @@
 package be.manager.remote;
 
-import be.dto.ChangeClientProiectDTO;
-import be.dto.ChangeDepartamentProiectDTO;
-import be.dto.ChangeNumeProiectDTO;
-import be.dto.ProiectDTO;
+import be.dto.*;
 import be.exceptions.BusinessException;
 import org.springframework.stereotype.Component;
 
@@ -26,4 +23,5 @@ public interface ProiectManagerRemote {
 
     ProiectDTO changeDepartamentProiect(ChangeDepartamentProiectDTO changeDepartamentProiectDTO) throws BusinessException;
 
+    EchipaDTO addProiectToEchipa(AddProiectToEchipaDTO addProiectToEchipaDTO) throws BusinessException;
 }

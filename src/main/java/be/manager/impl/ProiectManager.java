@@ -1,22 +1,21 @@
 package be.manager.impl;
 
-import be.dao.ClientDao;
-import be.dao.DepartamentDao;
-import be.dao.ProiectDao;
-import be.dto.ChangeClientProiectDTO;
-import be.dto.ChangeDepartamentProiectDTO;
-import be.dto.ChangeNumeProiectDTO;
-import be.dto.ProiectDTO;
+import be.dao.*;
+import be.dto.*;
+import be.dtoEntityMappers.EchipaDTOEntityMapper;
 import be.dtoEntityMappers.ProiectDTOEntityMapper;
 import be.entity.Client;
 import be.entity.Departament;
+import be.entity.Echipa;
 import be.entity.Proiect;
 import be.exceptions.BusinessException;
 import be.manager.remote.ProiectManagerRemote;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 @Component
@@ -30,6 +29,10 @@ public class ProiectManager implements ProiectManagerRemote {
 
     @Autowired
     private DepartamentDao departamentDao;
+
+    @Autowired
+    private EchipaDao echipaDao;
+
 
     private Logger logger = Logger.getLogger(ClientManager.class.getName());
 
@@ -117,5 +120,23 @@ public class ProiectManager implements ProiectManagerRemote {
         }
         else
             return null;
+    }
+
+    @Override
+    public EchipaDTO addProiectToEchipa(AddProiectToEchipaDTO addProiectToEchipaDTO) throws BusinessException {
+
+        Proiect proiect = proiectDao.findProiectByNume(addProiectToEchipaDTO.getNumeProiect());
+        Echipa echipa = echipaDao.findEchipaByNume(addProiectToEchipaDTO.getNumeEchipa());
+        if (proiect == null || echipa == null)
+            return null;
+        Set<Proiect> proiects = echipa.getProiecte();
+        proiects.add(proiect);
+        echipa.setProiecte(proiects);
+
+
+        //echipa.getProiecte().add(proiect);
+        echipaDao.save(echipa);
+        EchipaDTO dtoPersisted = EchipaDTOEntityMapper.getDTOFromEchipa(echipa);
+        return dtoPersisted;
     }
 }

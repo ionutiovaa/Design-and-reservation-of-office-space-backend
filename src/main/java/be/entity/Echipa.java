@@ -17,8 +17,10 @@ public class Echipa implements Serializable {
     @Column(name = "nume")
     private String nume;
 
-    @ManyToMany
-    //@JoinTable(joinColumns = "")
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "echipa_proiecte",
+            joinColumns = @JoinColumn(name = "echipa_id"),
+            inverseJoinColumns = @JoinColumn(name = "proiecte_id"))
     private Set<Proiect> proiecte = new HashSet<>();
 
     @Override

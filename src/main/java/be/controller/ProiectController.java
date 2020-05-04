@@ -1,9 +1,6 @@
 package be.controller;
 
-import be.dto.ChangeClientProiectDTO;
-import be.dto.ChangeDepartamentProiectDTO;
-import be.dto.ChangeNumeProiectDTO;
-import be.dto.ProiectDTO;
+import be.dto.*;
 import be.exceptions.BusinessException;
 import be.manager.remote.ProiectManagerRemote;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -92,6 +89,19 @@ public class ProiectController {
             ProiectDTO updatedProiect = proiectManagerRemote.changeDepartamentProiect(changeDepartamentProiectDTO);
             if (updatedProiect != null)
                 return ResponseEntity.ok(updatedProiect);
+            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } catch (BusinessException e){
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
+    @PostMapping(path = "/addProiectToEchipa", produces = "application/json")
+    public ResponseEntity<?> addProiectToEchipa(@RequestBody AddProiectToEchipaDTO addProiectToEchipaDTO){
+        try{
+            EchipaDTO updatedEchipa = proiectManagerRemote.addProiectToEchipa(addProiectToEchipaDTO);
+            if (updatedEchipa != null)
+                return ResponseEntity.ok(updatedEchipa);
             else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } catch (BusinessException e){
             e.printStackTrace();

@@ -1,5 +1,6 @@
 package be.dtoEntityMappers;
 
+import be.dto.AddProiectToEchipaDTO;
 import be.dto.ProiectDTO;
 import be.entity.Proiect;
 

@@ -1269,604 +1269,615 @@ association_value</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="328" parent="288" name="FKm8h7v1j1xd6i1cyla0pf96wsi">
+    <column id="328" parent="288" name="id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="329" parent="288" name="FKm8h7v1j1xd6i1cyla0pf96wsi">
       <ColNames>proiecte_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="329" parent="288" name="PRIMARY">
+    <key id="330" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>echipa_id
 proiecte_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="330" parent="288" name="FK3bn1rs9ve32g9aqqpch6lw00y">
+    <foreign-key id="331" parent="288" name="FK3bn1rs9ve32g9aqqpch6lw00y">
       <ColNames>echipa_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>echipa</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="331" parent="288" name="FKm8h7v1j1xd6i1cyla0pf96wsi">
+    <foreign-key id="332" parent="288" name="FKm8h7v1j1xd6i1cyla0pf96wsi">
       <ColNames>proiecte_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>proiecte</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="332" parent="289" name="id">
+    <column id="333" parent="289" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="289" name="numar">
+    <column id="334" parent="289" name="numar">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="289" name="nume">
+    <column id="335" parent="289" name="nume">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="289" name="id_sediu">
+    <column id="336" parent="289" name="id_sediu">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="336" parent="289" name="FK7es75e3yp7uyrho4euw6kry2y">
+    <index id="337" parent="289" name="FK7es75e3yp7uyrho4euw6kry2y">
       <ColNames>id_sediu</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="337" parent="289" name="PRIMARY">
+    <key id="338" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="338" parent="289" name="FK7es75e3yp7uyrho4euw6kry2y">
+    <foreign-key id="339" parent="289" name="FK7es75e3yp7uyrho4euw6kry2y">
       <ColNames>id_sediu</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>sedii</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="339" parent="290" name="next_val">
+    <column id="340" parent="290" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="291" name="id">
+    <column id="341" parent="291" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="291" name="cod_bare">
+    <column id="342" parent="291" name="cod_bare">
       <Position>2</Position>
       <DataType>tinyblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="291" name="stare_loc">
+    <column id="343" parent="291" name="stare_loc">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="291" name="pozitie">
+    <column id="344" parent="291" name="pozitie">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="344" parent="291" name="FKdd4jxptauraglkaklwhuickgp">
+    <index id="345" parent="291" name="FKdd4jxptauraglkaklwhuickgp">
       <ColNames>pozitie</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="345" parent="291" name="PRIMARY">
+    <key id="346" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="346" parent="291" name="FKdd4jxptauraglkaklwhuickgp">
+    <foreign-key id="347" parent="291" name="FKdd4jxptauraglkaklwhuickgp">
       <ColNames>pozitie</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>pozitii</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="347" parent="292" name="loc_id">
+    <column id="348" parent="292" name="loc_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="292" name="utilizari_id">
+    <column id="349" parent="292" name="utilizari_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="349" parent="292" name="UK_2oobrw90oj114d2bxu50hxvh6">
+    <index id="350" parent="292" name="UK_2oobrw90oj114d2bxu50hxvh6">
       <ColNames>utilizari_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="350" parent="292" name="PRIMARY">
+    <key id="351" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>loc_id
 utilizari_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="351" parent="292" name="UK_2oobrw90oj114d2bxu50hxvh6">
+    <key id="352" parent="292" name="UK_2oobrw90oj114d2bxu50hxvh6">
       <ColNames>utilizari_id</ColNames>
       <UnderlyingIndexName>UK_2oobrw90oj114d2bxu50hxvh6</UnderlyingIndexName>
     </key>
-    <foreign-key id="352" parent="292" name="FKny0wglig704itds99f5exri9d">
+    <foreign-key id="353" parent="292" name="FKny0wglig704itds99f5exri9d">
       <ColNames>loc_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>locuri</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="353" parent="292" name="FKtcn8peso6ia3x1xu2fsju7rp8">
+    <foreign-key id="354" parent="292" name="FKtcn8peso6ia3x1xu2fsju7rp8">
       <ColNames>utilizari_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>utilizari</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="354" parent="293" name="id">
+    <column id="355" parent="293" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="293" name="est">
+    <column id="356" parent="293" name="est">
       <Position>2</Position>
       <DataType>tinyblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="293" name="indice">
+    <column id="357" parent="293" name="indice">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="293" name="nord">
+    <column id="358" parent="293" name="nord">
       <Position>4</Position>
       <DataType>tinyblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="293" name="sud">
+    <column id="359" parent="293" name="sud">
       <Position>5</Position>
       <DataType>tinyblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="293" name="vest">
+    <column id="360" parent="293" name="vest">
       <Position>6</Position>
       <DataType>tinyblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="293" name="id_etaj">
+    <column id="361" parent="293" name="id_etaj">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="361" parent="293" name="FKpkr625a94n8wyvpseqnl9yrgl">
+    <index id="362" parent="293" name="FKpkr625a94n8wyvpseqnl9yrgl">
       <ColNames>id_etaj</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="362" parent="293" name="PRIMARY">
+    <key id="363" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="363" parent="293" name="FKpkr625a94n8wyvpseqnl9yrgl">
+    <foreign-key id="364" parent="293" name="FKpkr625a94n8wyvpseqnl9yrgl">
       <ColNames>id_etaj</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>etaje</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="364" parent="294" name="id">
+    <column id="365" parent="294" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="294" name="nume">
+    <column id="366" parent="294" name="nume">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="294" name="id_client">
+    <column id="367" parent="294" name="id_client">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="294" name="id_departament">
+    <column id="368" parent="294" name="id_departament">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="368" parent="294" name="FK9uyvwp9a75c49ca68b9bpj7ab">
+    <index id="369" parent="294" name="FK9uyvwp9a75c49ca68b9bpj7ab">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="369" parent="294" name="FK7y1oi020i9ut2pcqbnfucwyqk">
+    <index id="370" parent="294" name="FK7y1oi020i9ut2pcqbnfucwyqk">
       <ColNames>id_departament</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="370" parent="294" name="PRIMARY">
+    <key id="371" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="371" parent="294" name="FK9uyvwp9a75c49ca68b9bpj7ab">
+    <foreign-key id="372" parent="294" name="FK9uyvwp9a75c49ca68b9bpj7ab">
       <ColNames>id_client</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>client</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="372" parent="294" name="FK7y1oi020i9ut2pcqbnfucwyqk">
+    <foreign-key id="373" parent="294" name="FK7y1oi020i9ut2pcqbnfucwyqk">
       <ColNames>id_departament</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>departamente</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="373" parent="295" name="id">
+    <column id="374" parent="295" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="374" parent="295" name="PRIMARY">
+    <key id="375" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="375" parent="296" name="id">
+    <column id="376" parent="296" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="376" parent="296" name="date">
+    <column id="377" parent="296" name="date">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="377" parent="296" name="descriere">
+    <column id="378" parent="296" name="descriere">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="378" parent="296" name="stare">
+    <column id="379" parent="296" name="stare">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="379" parent="296" name="id_initiator">
+    <column id="380" parent="296" name="id_initiator">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="380" parent="296" name="FK7nruknvq7qhdaeiy58bdt1qd5">
+    <index id="381" parent="296" name="FK7nruknvq7qhdaeiy58bdt1qd5">
       <ColNames>id_initiator</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="381" parent="296" name="PRIMARY">
+    <key id="382" parent="296" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="382" parent="296" name="FK7nruknvq7qhdaeiy58bdt1qd5">
+    <foreign-key id="383" parent="296" name="FK7nruknvq7qhdaeiy58bdt1qd5">
       <ColNames>id_initiator</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="383" parent="297" name="rezervare_id">
+    <column id="384" parent="297" name="rezervare_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="384" parent="297" name="lista_locuri_id">
+    <column id="385" parent="297" name="lista_locuri_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="385" parent="297" name="UK_sgnjw4bc3sb19a4ds0xmmeq4c">
+    <index id="386" parent="297" name="UK_sgnjw4bc3sb19a4ds0xmmeq4c">
       <ColNames>lista_locuri_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="386" parent="297" name="PRIMARY">
+    <key id="387" parent="297" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>rezervare_id
 lista_locuri_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="387" parent="297" name="UK_sgnjw4bc3sb19a4ds0xmmeq4c">
+    <key id="388" parent="297" name="UK_sgnjw4bc3sb19a4ds0xmmeq4c">
       <ColNames>lista_locuri_id</ColNames>
       <UnderlyingIndexName>UK_sgnjw4bc3sb19a4ds0xmmeq4c</UnderlyingIndexName>
     </key>
-    <foreign-key id="388" parent="297" name="FKly123wfvy7npcf7rov96t1c08">
+    <foreign-key id="389" parent="297" name="FKly123wfvy7npcf7rov96t1c08">
       <ColNames>rezervare_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>rezervari</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="389" parent="297" name="FKrbhur2sdy05w2bh0orwc44fhp">
+    <foreign-key id="390" parent="297" name="FKrbhur2sdy05w2bh0orwc44fhp">
       <ColNames>lista_locuri_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>locuri</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="390" parent="298" name="rezervare_id">
+    <column id="391" parent="298" name="rezervare_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="298" name="lista_ocupanti_id">
+    <column id="392" parent="298" name="lista_ocupanti_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="392" parent="298" name="UK_d5xbw7gmq0op8tsu4ums43kh">
+    <index id="393" parent="298" name="UK_d5xbw7gmq0op8tsu4ums43kh">
       <ColNames>lista_ocupanti_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="393" parent="298" name="PRIMARY">
+    <key id="394" parent="298" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>rezervare_id
 lista_ocupanti_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="394" parent="298" name="UK_d5xbw7gmq0op8tsu4ums43kh">
+    <key id="395" parent="298" name="UK_d5xbw7gmq0op8tsu4ums43kh">
       <ColNames>lista_ocupanti_id</ColNames>
       <UnderlyingIndexName>UK_d5xbw7gmq0op8tsu4ums43kh</UnderlyingIndexName>
     </key>
-    <foreign-key id="395" parent="298" name="FKf1o3c2je2l67tdvf576utukes">
+    <foreign-key id="396" parent="298" name="FKf1o3c2je2l67tdvf576utukes">
       <ColNames>rezervare_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>rezervari</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="396" parent="298" name="FK1mv22a473i7v4efsy1tky065x">
+    <foreign-key id="397" parent="298" name="FK1mv22a473i7v4efsy1tky065x">
       <ColNames>lista_ocupanti_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="397" parent="299" name="saga_id">
+    <column id="398" parent="299" name="saga_id">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="398" parent="299" name="revision">
+    <column id="399" parent="299" name="revision">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="399" parent="299" name="saga_type">
+    <column id="400" parent="299" name="saga_type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="400" parent="299" name="serialized_saga">
+    <column id="401" parent="299" name="serialized_saga">
       <Position>4</Position>
       <DataType>longblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="401" parent="299" name="PRIMARY">
+    <key id="402" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>saga_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="402" parent="300" name="id">
+    <column id="403" parent="300" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="300" name="adresa">
+    <column id="404" parent="300" name="adresa">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="404" parent="300" name="nume">
+    <column id="405" parent="300" name="nume">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="405" parent="300" name="PRIMARY">
+    <key id="406" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="406" parent="301" name="processor_name">
+    <column id="407" parent="301" name="processor_name">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="407" parent="301" name="segment">
+    <column id="408" parent="301" name="segment">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="408" parent="301" name="owner">
+    <column id="409" parent="301" name="owner">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="409" parent="301" name="timestamp">
+    <column id="410" parent="301" name="timestamp">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="410" parent="301" name="token">
+    <column id="411" parent="301" name="token">
       <Position>5</Position>
       <DataType>longblob|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="411" parent="301" name="token_type">
+    <column id="412" parent="301" name="token_type">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="412" parent="301" name="PRIMARY">
+    <key id="413" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>processor_name
 segment</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="413" parent="302" name="id">
+    <column id="414" parent="302" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="414" parent="302" name="token">
+    <column id="415" parent="302" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="415" parent="302" name="username">
+    <column id="416" parent="302" name="username">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="416" parent="302" name="PRIMARY">
+    <column id="417" parent="302" name="expiration">
+      <Position>4</Position>
+      <DataType>datetime(6)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="418" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="417" parent="303" name="id">
+    <column id="419" parent="303" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="418" parent="303" name="email">
+    <column id="420" parent="303" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="419" parent="303" name="first_name">
+    <column id="421" parent="303" name="first_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="420" parent="303" name="last_name">
+    <column id="422" parent="303" name="last_name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="421" parent="303" name="mobile_number">
+    <column id="423" parent="303" name="mobile_number">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="422" parent="303" name="password">
+    <column id="424" parent="303" name="password">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="423" parent="303" name="username">
+    <column id="425" parent="303" name="username">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="424" parent="303" name="user_type">
+    <column id="426" parent="303" name="user_type">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="425" parent="303" name="PRIMARY">
+    <key id="427" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="426" parent="304" name="user_id">
+    <column id="428" parent="304" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="427" parent="304" name="echipe_id">
+    <column id="429" parent="304" name="echipe_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="428" parent="304" name="UK_7j81bvq4cb8p8vgyf1ffgchl1">
+    <index id="430" parent="304" name="UK_7j81bvq4cb8p8vgyf1ffgchl1">
       <ColNames>echipe_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="429" parent="304" name="PRIMARY">
+    <key id="431" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 echipe_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="430" parent="304" name="UK_7j81bvq4cb8p8vgyf1ffgchl1">
+    <key id="432" parent="304" name="UK_7j81bvq4cb8p8vgyf1ffgchl1">
       <ColNames>echipe_id</ColNames>
       <UnderlyingIndexName>UK_7j81bvq4cb8p8vgyf1ffgchl1</UnderlyingIndexName>
     </key>
-    <foreign-key id="431" parent="304" name="FK8dv5udtrx52ykkvdox9seiw8c">
+    <foreign-key id="433" parent="304" name="FK8dv5udtrx52ykkvdox9seiw8c">
       <ColNames>user_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="432" parent="304" name="FKlhtchyhqvg50k24y0uarn510h">
+    <foreign-key id="434" parent="304" name="FKlhtchyhqvg50k24y0uarn510h">
       <ColNames>echipe_id</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>echipa</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="433" parent="305" name="id">
+    <column id="435" parent="305" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="434" parent="305" name="final_date">
+    <column id="436" parent="305" name="final_date">
       <Position>2</Position>
       <DataType>datetime(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="435" parent="305" name="start_date">
+    <column id="437" parent="305" name="start_date">
       <Position>3</Position>
       <DataType>datetime(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="436" parent="305" name="user">
+    <column id="438" parent="305" name="user">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="437" parent="305" name="FKq3uqru7ny61t96xrm0d36xk79">
+    <index id="439" parent="305" name="FKq3uqru7ny61t96xrm0d36xk79">
       <ColNames>user</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="438" parent="305" name="PRIMARY">
+    <key id="440" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="439" parent="305" name="FKq3uqru7ny61t96xrm0d36xk79">
+    <foreign-key id="441" parent="305" name="FKq3uqru7ny61t96xrm0d36xk79">
       <ColNames>user</ColNames>
       <RefSchemaName>licentabe</RefSchemaName>
       <RefTableName>users</RefTableName>

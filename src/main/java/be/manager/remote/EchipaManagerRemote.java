@@ -22,6 +22,6 @@ public interface EchipaManagerRemote {
 
     EchipaDTO changeNumeEchipa(ChangeNumeEchipaDTO changeNumeEchipaDTO) throws BusinessException;
 
-    //EchipaDTO addProiectToEchipa(AddProiectToEchipaDTO addProiectToEchipaDTO) throws BusinessException;
+    /*EchipaDTO addProiectToEchipa(AddProiectToEchipaDTO addProiectToEchipaDTO) throws BusinessException;*/
 
 }

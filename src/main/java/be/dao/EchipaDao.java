@@ -24,8 +24,6 @@ public interface EchipaDao extends CrudRepository<Echipa, Integer> {
 
     void deleteEchipaByNume(String nume);
 
-
-
     @Transactional
     @Modifying
     @Query("UPDATE Echipa e " +

@@ -7,6 +7,39 @@ public class EchipaDTO implements Serializable {
 
     private Integer ID;
     private String nume;
+
+    /*@Override
+    public String toString() {
+        return "EchipaDTO{" +
+                "ID=" + ID +
+                ", nume='" + nume + '\'' +
+                '}';
+    }
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public EchipaDTO() {
+    }
+
+    public EchipaDTO(Integer ID, String nume) {
+        this.ID = ID;
+        this.nume = nume;
+    }*/
+
     private Set<ProiectDTO> proiecte;
 
     @Override
