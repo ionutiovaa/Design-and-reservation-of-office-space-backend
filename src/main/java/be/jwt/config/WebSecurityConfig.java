@@ -52,9 +52,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/users/createUser",
+                        "/users/addUserToEchipa",
                         "/authenticate",
                         "/users/groups",
                         "/users/createUser",
+                        "/users/deleteUser/{username}",
                         "/users/getUsers",
                         "/clients/getClients",
                         "/clients/createClient",

@@ -57,8 +57,23 @@ public class UserController extends HttpServlet {
     public ResponseEntity<?> addUser(@RequestBody UserDTO userDTO){
         try {
             UserDTO user = userManagerRemote.insertUser(userDTO);
+            if (user == null)
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This user already exists.");
             return ResponseEntity.ok(user);
         } catch (BusinessException e){
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
+    @DeleteMapping(path = "/deleteUser/{username}", produces = "application/json")
+    public ResponseEntity<?> deleteUser(@PathVariable String username) {
+        try{
+            UserDTO userDTO = userManagerRemote.deleteUserByUsername(username);
+            if (userDTO != null)
+                return ResponseEntity.ok(HttpStatus.OK);
+            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } catch (Exception e){
+            e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }

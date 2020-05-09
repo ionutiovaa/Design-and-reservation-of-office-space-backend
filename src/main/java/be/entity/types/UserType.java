@@ -1,5 +1,7 @@
 package be.entity.types;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,6 +16,7 @@ public enum UserType {
         this.actualString = actualString;
     }
 
+    @JsonValue
     public String getActualString() {
         return actualString;
     }

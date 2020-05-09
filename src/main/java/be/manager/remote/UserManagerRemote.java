@@ -26,4 +26,6 @@ public interface UserManagerRemote {
 
     EchipaDTO addUserToEchipa(AddUserToEchipaDTO addUserToEchipaDTO) throws BusinessException;
 
+    UserDTO deleteUserByUsername(String username) throws BusinessException;
+
 }

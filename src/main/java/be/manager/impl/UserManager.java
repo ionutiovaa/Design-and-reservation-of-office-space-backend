@@ -36,6 +36,11 @@ public class UserManager implements UserManagerRemote {
 
     @Override
     public UserDTO insertUser(UserDTO userDTO) throws BusinessException {
+        User userFounded = userDao.findUserByUsername(userDTO.getUsername());
+        if (userFounded != null)
+            return null;
+        /*if (userDTO.getUsername().isEmpty() || userDTO.getPassword().isEmpty())
+            return null;*/
         User user = createUserToInsert(userDTO);
         User persistedUser = userDao.save(user);
         UserDTO dtoPersisted = UserDTOEntityMapper.getDTOFromUser(persistedUser);
@@ -43,7 +48,9 @@ public class UserManager implements UserManagerRemote {
     }
 
     private User createUserToInsert(UserDTO userDTO){
-        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getMobileNumber(), userDTO.getEmail(), userDTO.getUsername(), userDTO.getPassword(), EchipaDTOEntityMapper.getAllEchipeSetFromDTO(userDTO.getEchipe()));
+        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getMobileNumber(), userDTO.getEmail(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getUserType());
+        if (userDTO.getEchipe() != null)
+            user.setEchipe(EchipaDTOEntityMapper.getAllEchipeSetFromDTO(userDTO.getEchipe()));
         return user;
     }
 
@@ -96,5 +103,17 @@ public class UserManager implements UserManagerRemote {
         echipaDao.save(echipa);
         EchipaDTO dtoPersisted = EchipaDTOEntityMapper.getDTOFromEchipa(echipa);
         return dtoPersisted;
+    }
+
+    @Override
+    public UserDTO deleteUserByUsername(String username) throws BusinessException {
+        User user = userDao.findUserByUsername(username);
+        if (user == null)
+            return null;
+        UserDTO deletedUser = UserDTOEntityMapper.getDTOFromUser(user);
+        if (username.equals(user.getUsername())){
+            userDao.delete(user);
+        }
+        return deletedUser;
     }
 }

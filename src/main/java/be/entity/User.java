@@ -131,7 +131,17 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String firstName, String lastName, String mobileNumber, String email, String username, String password, Set<Echipa> echipe) {
+    public User(String firstName, String lastName, String mobileNumber, String email, String username, String password, UserType userType) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mobileNumber = mobileNumber;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.userType = userType;
+    }
+
+    public User(String firstName, String lastName, String mobileNumber, String email, String username, String password, Set<Echipa> echipe, UserType userType) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mobileNumber = mobileNumber;
@@ -139,5 +149,6 @@ public class User implements Serializable {
         this.username = username;
         this.password = password;
         this.echipe = echipe;
+        this.userType = userType;
     }
 }
