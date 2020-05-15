@@ -4,6 +4,7 @@ import be.dto.AddUserToEchipaDTO;
 import be.dto.ChangePasswordDTO;
 import be.dto.EchipaDTO;
 import be.dto.UserDTO;
+import be.entity.types.UserType;
 import be.exceptions.BusinessException;
 import be.manager.remote.UserManagerRemote;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -65,8 +66,8 @@ public class UserController extends HttpServlet {
         }
     }
 
-    @DeleteMapping(path = "/deleteUser/{username}", produces = "application/json")
-    public ResponseEntity<?> deleteUser(@PathVariable String username) {
+    @DeleteMapping(path = "/deleteUser", produces = "application/json")
+    public ResponseEntity<?> deleteUser(@RequestParam String username) {
         try{
             UserDTO userDTO = userManagerRemote.deleteUserByUsername(username);
             if (userDTO != null)
@@ -100,6 +101,12 @@ public class UserController extends HttpServlet {
             e.printStackTrace();
             return ResponseEntity.status(500).body(e.getMessage());
         }
+    }
+
+
+    @GetMapping(path = "/getUserType", produces = "application/json")
+    public ResponseEntity<UserType> getUserType(@RequestParam String username) throws BusinessException {
+        return new ResponseEntity<>(userManagerRemote.getUserType(username), HttpStatus.OK);
     }
 
 }

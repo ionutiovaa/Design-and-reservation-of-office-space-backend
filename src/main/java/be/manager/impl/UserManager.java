@@ -10,6 +10,7 @@ import be.dtoEntityMappers.EchipaDTOEntityMapper;
 import be.dtoEntityMappers.UserDTOEntityMapper;
 import be.entity.Echipa;
 import be.entity.User;
+import be.entity.types.UserType;
 import be.exceptions.BusinessException;
 import be.manager.remote.UserManagerRemote;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,11 +82,13 @@ public class UserManager implements UserManagerRemote {
 
     @Override
     public UserDTO changePassword(ChangePasswordDTO changePasswordDTO) throws BusinessException {
-        User user = this.userDao.findAllByID(changePasswordDTO.getUserId());
+        User user = userDao.findUserByUsername(changePasswordDTO.getUsername());
+        if (user == null)
+            throw new BusinessException("Not found", "This username doesn't exists.");
         if (user.getPassword().equals(changePasswordDTO.getOldPassword())){
             // Change password;
             user.setPassword(changePasswordDTO.getNewPassword());
-            int updated = this.userDao.updatePassword(changePasswordDTO.getUserId(), changePasswordDTO.getNewPassword());
+            int updated = this.userDao.updatePassword(user.getID(), changePasswordDTO.getNewPassword());
             return UserDTOEntityMapper.getDTOCompleteFromUser(user);
         }
         else throw new BusinessException("Password error", "The old password is wrong");
@@ -115,5 +118,11 @@ public class UserManager implements UserManagerRemote {
             userDao.delete(user);
         }
         return deletedUser;
+    }
+
+    @Override
+    public UserType getUserType(String username) throws BusinessException {
+        User user = userDao.findUserByUsername(username);
+        return user.getUserType();
     }
 }

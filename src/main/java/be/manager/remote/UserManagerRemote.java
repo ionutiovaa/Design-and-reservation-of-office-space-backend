@@ -4,6 +4,8 @@ import be.dto.AddUserToEchipaDTO;
 import be.dto.ChangePasswordDTO;
 import be.dto.EchipaDTO;
 import be.dto.UserDTO;
+import be.entity.User;
+import be.entity.types.UserType;
 import be.exceptions.BusinessException;
 import org.springframework.stereotype.Component;
 
@@ -27,5 +29,7 @@ public interface UserManagerRemote {
     EchipaDTO addUserToEchipa(AddUserToEchipaDTO addUserToEchipaDTO) throws BusinessException;
 
     UserDTO deleteUserByUsername(String username) throws BusinessException;
+
+    UserType getUserType(String username) throws BusinessException;
 
 }
