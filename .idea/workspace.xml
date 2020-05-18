@@ -4,12 +4,11 @@
     <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dto/ChangePasswordDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dto/ChangePasswordDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UserManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/remote/UserManagerRemote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/remote/UserManagerRemote.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/dto/ChangePasswordDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dto/ChangePasswordDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java" afterDir="false" />
     </list>
@@ -101,20 +100,21 @@
     <session id="-695083636">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="62" />
+          <entry key="project.closed" value="66" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.16" value="5" />
           <entry key="project.open.time.17" value="7" />
           <entry key="project.open.time.18" value="5" />
           <entry key="project.open.time.19" value="6" />
           <entry key="project.open.time.2" value="5" />
-          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.20" value="3" />
           <entry key="project.open.time.21" value="3" />
-          <entry key="project.open.time.22" value="2" />
-          <entry key="project.open.time.23" value="5" />
+          <entry key="project.open.time.22" value="3" />
+          <entry key="project.open.time.23" value="6" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="4" />
+          <entry key="project.open.time.25" value="5" />
           <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.36" value="1" />
@@ -123,7 +123,7 @@
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="63" />
+          <entry key="project.opened" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -131,7 +131,7 @@
           <entry key="class" value="1" />
           <entry key="gradle" value="14" />
           <entry key="gradlew" value="2" />
-          <entry key="java" value="697" />
+          <entry key="java" value="699" />
           <entry key="properties" value="12" />
           <entry key="rezervari" value="1" />
           <entry key="saga_entry" value="1" />
@@ -146,7 +146,7 @@
           <entry key="CLASS" value="1" />
           <entry key="Database Element" value="5" />
           <entry key="Groovy" value="14" />
-          <entry key="JAVA" value="697" />
+          <entry key="JAVA" value="699" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="12" />
           <entry key="Scratch" value="1" />
@@ -156,16 +156,16 @@
         <counts>
           <entry key="dummy" value="23" />
           <entry key="gradle" value="134" />
-          <entry key="java" value="23507" />
+          <entry key="java" value="23570" />
           <entry key="properties" value="39" />
-          <entry key="txt" value="95" />
+          <entry key="txt" value="115" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="134" />
-          <entry key="JAVA" value="23507" />
-          <entry key="PLAIN_TEXT" value="118" />
+          <entry key="JAVA" value="23570" />
+          <entry key="PLAIN_TEXT" value="138" />
           <entry key="Properties" value="39" />
         </counts>
       </usages-collector>
@@ -181,32 +181,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Pozitie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="71" column="79" lean-forward="true" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
+            <state relative-caret-position="180">
+              <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/dto/ChangePasswordDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Loc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-              <folding>
-                <element signature="e#303#304#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#635#636#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -223,7 +210,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UserDTOEntityMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="920">
               <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
             </state>
           </provider>
@@ -232,8 +219,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+            <state relative-caret-position="280">
+              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -250,8 +237,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="87" column="75" lean-forward="true" selection-start-line="87" selection-start-column="75" selection-end-line="87" selection-end-column="75" />
+            <state relative-caret-position="1840">
+              <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -259,8 +246,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+            <state relative-caret-position="720">
+              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -268,8 +255,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -748,11 +735,11 @@
         <option value="$PROJECT_DIR$/src/main/java/be/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/dto/UserDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/entity/types/UserType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/dto/ChangePasswordDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -762,7 +749,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1050" />
@@ -773,6 +760,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -928,8 +917,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1132,7 +1119,12 @@
       <workItem from="1589132334129" duration="2671000" />
       <workItem from="1589143412359" duration="4870000" />
       <workItem from="1589208053506" duration="48000" />
-      <workItem from="1589478469733" duration="5565000" />
+      <workItem from="1589478469733" duration="6067000" />
+      <workItem from="1589546510462" duration="1919000" />
+      <workItem from="1589642550782" duration="68000" />
+      <workItem from="1589647481166" duration="1954000" />
+      <workItem from="1589729580705" duration="9164000" />
+      <workItem from="1589805593342" duration="2296000" />
     </task>
     <task id="LOCAL-00001" summary="added jwt token">
       <created>1588296082671</created>
@@ -1183,11 +1175,18 @@
       <option name="project" value="LOCAL" />
       <updated>1588988307856</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finalize change password">
+      <created>1589501256597</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589501256597</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266982000" />
+    <option name="totallyTimeSpent" value="282885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1202,7 +1201,7 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.21610738" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.20872483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1212,15 +1211,15 @@
       <window_info id="Web" order="7" sideWeight="0.50165564" side_tool="true" weight="0.22013423" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.34685314" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6295302" visible="true" weight="0.23916084" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22377622" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6295302" visible="true" weight="0.21958043" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32027972" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Spring" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.13566433" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32867134" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.27552447" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23076923" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3704698" side_tool="true" weight="0.5356643" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.22097902" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
@@ -1256,7 +1255,8 @@
     <MESSAGE value="added echipa" />
     <MESSAGE value="added echipaUsers" />
     <MESSAGE value="finalize register" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize register" />
+    <MESSAGE value="finalize change password" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize change password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1297,59 +1297,10 @@
           <properties />
           <option name="timeStamp" value="128" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UserController.java</url>
-          <line>108</line>
-          <properties />
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java</url>
-          <line>124</line>
-          <properties />
-          <option name="timeStamp" value="140" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java</url>
-          <line>125</line>
-          <properties />
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="143" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UserController.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UserController.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/5.2.5.RELEASE/2388837e6f967bb71399a6076c7070c0b0b1fddc/spring-webmvc-5.2.5.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="951" selection-start-line="951" selection-end-line="951" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.2.5.RELEASE/5d889829b8a78ad6d521931ab93a3ce50e5aefc9/spring-aop-5.2.5.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -1565,13 +1516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Loc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
@@ -1607,11 +1551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1702#1703#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1626,50 +1565,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/EchipaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+        <state relative-caret-position="218">
+          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/dto/ChangePasswordDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="520">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1681,38 +1595,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UserDTOEntityMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="920">
           <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="87" column="75" lean-forward="true" selection-start-line="87" selection-start-column="75" selection-end-line="87" selection-end-column="75" />
+        <state relative-caret-position="1840">
+          <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="71" column="79" lean-forward="true" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
+        <state relative-caret-position="720">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/EchipaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Loc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Pozitie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
         </state>
       </provider>
     </entry>

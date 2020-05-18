@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class ChangePasswordDTO implements Serializable {
 
-    private String username;
+    private Integer userId;
     private String oldPassword;
     private String newPassword;
 
@@ -12,12 +12,12 @@ public class ChangePasswordDTO implements Serializable {
 
     }
 
-    public String getUsername() {
-        return username;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getOldPassword() {
@@ -36,8 +36,8 @@ public class ChangePasswordDTO implements Serializable {
         this.newPassword = newPassword;
     }
 
-    public ChangePasswordDTO(String username, String oldPassword, String newPassword) {
-        this.username = username;
+    public ChangePasswordDTO(Integer userId, String oldPassword, String newPassword) {
+        this.userId = userId;
         this.oldPassword = oldPassword;
         this.newPassword = newPassword;
     }

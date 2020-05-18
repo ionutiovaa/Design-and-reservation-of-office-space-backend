@@ -67,9 +67,9 @@ public class UserController extends HttpServlet {
     }
 
     @DeleteMapping(path = "/deleteUser", produces = "application/json")
-    public ResponseEntity<?> deleteUser(@RequestParam String username) {
+    public ResponseEntity<?> deleteUser(@RequestParam Integer id) {
         try{
-            UserDTO userDTO = userManagerRemote.deleteUserByUsername(username);
+            UserDTO userDTO = userManagerRemote.deleteUserById(id);
             if (userDTO != null)
                 return ResponseEntity.ok(HttpStatus.OK);
             else return new ResponseEntity<>(HttpStatus.NOT_FOUND);

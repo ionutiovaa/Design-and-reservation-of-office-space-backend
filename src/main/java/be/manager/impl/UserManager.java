@@ -82,7 +82,7 @@ public class UserManager implements UserManagerRemote {
 
     @Override
     public UserDTO changePassword(ChangePasswordDTO changePasswordDTO) throws BusinessException {
-        User user = userDao.findUserByUsername(changePasswordDTO.getUsername());
+        User user = userDao.findAllByID(changePasswordDTO.getUserId());
         if (user == null)
             throw new BusinessException("Not found", "This username doesn't exists.");
         if (user.getPassword().equals(changePasswordDTO.getOldPassword())){
@@ -109,12 +109,12 @@ public class UserManager implements UserManagerRemote {
     }
 
     @Override
-    public UserDTO deleteUserByUsername(String username) throws BusinessException {
-        User user = userDao.findUserByUsername(username);
+    public UserDTO deleteUserById(Integer id) throws BusinessException {
+        User user = userDao.findAllByID(id);
         if (user == null)
             return null;
         UserDTO deletedUser = UserDTOEntityMapper.getDTOFromUser(user);
-        if (username.equals(user.getUsername())){
+        if (id == user.getID()){
             userDao.delete(user);
         }
         return deletedUser;
