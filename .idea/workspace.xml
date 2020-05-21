@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/controller/LocController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/controller/QRCodeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/LocDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/LocuriUtilizariDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/QRCodeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/TimeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/ChangeQRCodeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/FreeTimeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/LocDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/QRCodeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/LocDTOEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/QRCodeDTOEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UtilizareDTOEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/entity/LocuriUtilizari.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/QRCodeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/QRCodeManagerRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/repository/QRCodeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/service/QRCodeSerive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/service/QRCodeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/UtilizareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/UtilizareController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Loc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Loc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/QRCode.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Utilizare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Utilizare.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/QRCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/QRCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -185,14 +154,14 @@
           <entry key="gradle" value="134" />
           <entry key="java" value="28032" />
           <entry key="properties" value="41" />
-          <entry key="txt" value="115" />
+          <entry key="txt" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="134" />
           <entry key="JAVA" value="28031" />
-          <entry key="PLAIN_TEXT" value="141" />
+          <entry key="PLAIN_TEXT" value="160" />
           <entry key="Properties" value="41" />
           <entry key="Spring Data QL" value="1" />
         </counts>
@@ -1192,7 +1161,7 @@
       <workItem from="1589805593342" duration="4320000" />
       <workItem from="1589911753103" duration="13779000" />
       <workItem from="1589964388886" duration="13306000" />
-      <workItem from="1590071651728" duration="5313000" />
+      <workItem from="1590071651728" duration="5730000" />
     </task>
     <task id="LOCAL-00001" summary="added jwt token">
       <created>1588296082671</created>
@@ -1250,11 +1219,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589501256597</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="init locUtilizari">
+      <created>1590080268515</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590080268515</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317307000" />
+    <option name="totallyTimeSpent" value="317724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1278,7 +1254,7 @@
       <window_info id="Web" order="7" sideWeight="0.50165564" side_tool="true" weight="0.22013423" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.34685314" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6295302" visible="true" weight="0.31748253" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6295302" visible="true" weight="0.5314685" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31328672" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1323,7 +1299,8 @@
     <MESSAGE value="added echipaUsers" />
     <MESSAGE value="finalize register" />
     <MESSAGE value="finalize change password" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize change password" />
+    <MESSAGE value="init locUtilizari" />
+    <option name="LAST_COMMIT_MESSAGE" value="init locUtilizari" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
