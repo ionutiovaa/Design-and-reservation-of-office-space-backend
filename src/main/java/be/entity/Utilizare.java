@@ -22,6 +22,9 @@ public class Utilizare implements Serializable {
     private Date startDate;
     private Date finalDate;
 
+    @ManyToMany(mappedBy = "utilizari", cascade = CascadeType.ALL)
+    private Set<Loc> locuri = new HashSet<>();
+
     @Override
     public String toString() {
         return "Utilizare{" +
@@ -30,6 +33,21 @@ public class Utilizare implements Serializable {
                 ", startDate=" + startDate +
                 ", finalDate=" + finalDate +
                 '}';
+    }
+
+    public Utilizare(User user, Date startDate, Date finalDate, Set<Loc> locuri) {
+        this.user = user;
+        this.startDate = startDate;
+        this.finalDate = finalDate;
+        this.locuri = locuri;
+    }
+
+    public Set<Loc> getLocuri() {
+        return locuri;
+    }
+
+    public void setLocuri(Set<Loc> locuri) {
+        this.locuri = locuri;
     }
 
     public Integer getID() {

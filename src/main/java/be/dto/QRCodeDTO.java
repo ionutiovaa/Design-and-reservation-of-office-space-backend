@@ -1,24 +1,16 @@
 /*
-package be.entity;
+package be.dto;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name = "qrcode")
-public class QRCode implements Serializable {
+public class QRCodeDTO implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
     private Integer ID;
-
-    @Column(name = "nume")
     private String nume;
 
     @Override
     public String toString() {
-        return "QRCode{" +
+        return "QRCodeDTO{" +
                 "ID=" + ID +
                 ", nume='" + nume + '\'' +
                 '}';
@@ -40,10 +32,11 @@ public class QRCode implements Serializable {
         this.nume = nume;
     }
 
-    public QRCode() {
+    public QRCodeDTO() {
     }
 
-    public QRCode(String nume) {
+    public QRCodeDTO(Integer ID, String nume) {
+        this.ID = ID;
         this.nume = nume;
     }
 }

@@ -16,8 +16,8 @@ public class Loc implements Serializable {
     @Column(name = "ID")
     private Integer ID;
 
-    @Column(name = "cod_bare")
-    private QRCode qrCode;
+    @Column(name = "qrCode")
+    private String qrCode;
 
     @Column(name = "stare_loc")
     @Enumerated(EnumType.STRING)
@@ -27,14 +27,17 @@ public class Loc implements Serializable {
     @JoinColumn(name = "pozitie", referencedColumnName = "ID")
     private Pozitie pozitie;
 
-    @OneToMany
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "locuri_utilizari",
+            joinColumns = @JoinColumn(name = "loc_id"),
+            inverseJoinColumns = @JoinColumn(name = "utilizare_id"))
     private Set<Utilizare> utilizari = new HashSet<>();
 
     @Override
     public String toString() {
         return "Loc{" +
                 "ID=" + ID +
-                ", qrCode=" + qrCode +
+                ", qrCode='" + qrCode + '\'' +
                 ", stareLoc=" + stareLoc +
                 ", pozitie=" + pozitie +
                 ", utilizari=" + utilizari +
@@ -49,11 +52,11 @@ public class Loc implements Serializable {
         this.ID = ID;
     }
 
-    public QRCode getQrCode() {
+    public String getQrCode() {
         return qrCode;
     }
 
-    public void setQrCode(QRCode qrCode) {
+    public void setQrCode(String qrCode) {
         this.qrCode = qrCode;
     }
 
@@ -84,7 +87,7 @@ public class Loc implements Serializable {
     public Loc() {
     }
 
-    public Loc(QRCode qrCode, StareLoc stareLoc, Pozitie pozitie, Set<Utilizare> utilizari) {
+    public Loc(String qrCode, StareLoc stareLoc, Pozitie pozitie, Set<Utilizare> utilizari) {
         this.qrCode = qrCode;
         this.stareLoc = stareLoc;
         this.pozitie = pozitie;

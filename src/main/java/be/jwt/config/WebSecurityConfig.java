@@ -61,7 +61,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/users/getUsers",
                         "/users/getUserType",
                         "/users/getUserType/{username}",
-                        //"/users/getUserType/?username={username}",
                         "/clients/getClients",
                         "/clients/createClient",
                         "/clients/deleteClient/{nume}",
@@ -81,7 +80,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/echipe/getEchipe",
                         "/echipe/createEchipa",
                         "/echipe/deleteEchipa/{nume}",
-                        "/echipe/updateEchipa"
+                        "/echipe/updateEchipa",
+                        "/qrcodes/getQRCodes",
+                        "/qrcodes/createQRCode",
+                        "/qrcodes/deleteQRCode",
+                        "/locuri/getLocuri",
+                        "/locuri/createLoc",
+                        "/locuri/deleteLoc",
+                        "/utilizari/createUtilizare"
 
                 )
                 .permitAll()
