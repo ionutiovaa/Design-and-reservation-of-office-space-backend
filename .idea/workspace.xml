@@ -1,66 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/controller/DeskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/controller/EtajController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/controller/SediuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/DeskDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/DesksUtilizariDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/EtajDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/DeskDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/DeskDTOEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/entity/Desk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/entity/DesksUtilizari.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/DeskManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/SediuManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/DeskManagerRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/EtajMangerRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/SediuManagerRemote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/JwtAuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/JwtAuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/LocController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/LocController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/LocDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/LocDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/LocuriUtilizariDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/LocuriUtilizariDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/UtilizareDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/UtilizareDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dto/LocDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dto/LocDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dto/UtilizareDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dto/UtilizareDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/LocDTOEntityMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/LocDTOEntityMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UserDTOEntityMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UserDTOEntityMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Etaj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Etaj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Loc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Loc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Rezervare.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Sediu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Sediu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Utilizare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Utilizare.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/jwt/model/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/jwt/model/JwtTokenUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/LocManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/LocManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UtilizareManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UtilizareManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/remote/LocManagerRemote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/remote/LocManagerRemote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/LocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/LocController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/LocDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/LocDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/LocuriUtilizariDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/LocuriUtilizariDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dto/LocDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dto/LocDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/LocDTOEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/LocDTOEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UserDTOEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UserDTOEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Etaj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Etaj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Rezervare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Rezervare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Sediu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Sediu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" afterDir="false" />
-    </list>
+    <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -266,8 +207,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/LocController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="293">
+              <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#667#668#0" expanded="true" />
@@ -1226,7 +1167,7 @@
       <workItem from="1590496538422" duration="4943000" />
       <workItem from="1590512095474" duration="8887000" />
       <workItem from="1590528510332" duration="5816000" />
-      <workItem from="1590579739805" duration="1611000" />
+      <workItem from="1590579739805" duration="1857000" />
     </task>
     <task id="LOCAL-00001" summary="added jwt token">
       <created>1588296082671</created>
@@ -1295,7 +1236,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370742000" />
+    <option name="totallyTimeSpent" value="370988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1319,7 +1260,7 @@
       <window_info id="Web" order="7" sideWeight="0.50165564" side_tool="true" weight="0.22013423" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.34685314" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6295302" visible="true" weight="0.46293706" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6295302" weight="0.46293706" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28671327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1327,7 +1268,7 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.13566433" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32867134" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33566433" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31888112" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3704698" side_tool="true" weight="0.5356643" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.21538462" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
@@ -1910,8 +1851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/LocController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        <state relative-caret-position="293">
+          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#667#668#0" expanded="true" />
