@@ -1,6 +1,5 @@
+/*
 package be.entity;
-
-import be.entity.types.StareLoc;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,8 +7,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "locuri")
-public class Loc implements Serializable {
+@Table(name = "desks")
+public class Desk implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,54 +24,15 @@ public class Loc implements Serializable {
     @Column(name = "value")
     private Integer value;
 
-    @ManyToOne
-    @JoinColumn(name = "id_etaj", referencedColumnName = "ID")
-    private Etaj etaj;
-
-    /*@Column(name = "stare_loc")
-    @Enumerated(EnumType.STRING)
-    private StareLoc stareLoc;*/
-
-    /*@OneToOne
-    @JoinColumn(name = "pozitie", referencedColumnName = "ID")
-    private Pozitie pozitie;*/
-
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "locuri_utilizari",
-            joinColumns = @JoinColumn(name = "loc_id"),
+    @JoinTable(name = "desks_utilizari",
+            joinColumns = @JoinColumn(name = "desk_id"),
             inverseJoinColumns = @JoinColumn(name = "utilizare_id"))
     private Set<Utilizare> utilizari = new HashSet<>();
 
-    public Integer getID() {
-        return ID;
-    }
-
-    public void setID(Integer ID) {
-        this.ID = ID;
-    }
-
-    public String getQrCode() {
-        return qrCode;
-    }
-
-    public void setQrCode(String qrCode) {
-        this.qrCode = qrCode;
-    }
-
-    public Set<Utilizare> getUtilizari() {
-        return utilizari;
-    }
-
-    public void setUtilizari(Set<Utilizare> utilizari) {
-        this.utilizari = utilizari;
-    }
-
-    public Loc() {
-    }
-
     @Override
     public String toString() {
-        return "Loc{" +
+        return "Desk{" +
                 "ID=" + ID +
                 ", pozitie='" + pozitie + '\'' +
                 ", qrCode='" + qrCode + '\'' +
@@ -81,12 +41,19 @@ public class Loc implements Serializable {
                 '}';
     }
 
-    public Loc(String pozitie, String qrCode, Integer value, Etaj etaj, Set<Utilizare> utilizari) {
+    public Desk(String pozitie, String qrCode, Integer value, Set<Utilizare> utilizari) {
         this.pozitie = pozitie;
         this.qrCode = qrCode;
         this.value = value;
-        this.etaj = etaj;
         this.utilizari = utilizari;
+    }
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
     }
 
     public String getPozitie() {
@@ -97,6 +64,14 @@ public class Loc implements Serializable {
         this.pozitie = pozitie;
     }
 
+    public String getQrCode() {
+        return qrCode;
+    }
+
+    public void setQrCode(String qrCode) {
+        this.qrCode = qrCode;
+    }
+
     public Integer getValue() {
         return value;
     }
@@ -104,4 +79,16 @@ public class Loc implements Serializable {
     public void setValue(Integer value) {
         this.value = value;
     }
+
+    public Set<Utilizare> getUtilizari() {
+        return utilizari;
+    }
+
+    public void setUtilizari(Set<Utilizare> utilizari) {
+        this.utilizari = utilizari;
+    }
+
+    public Desk() {
+    }
 }
+*/

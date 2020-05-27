@@ -1,21 +1,23 @@
+/*
 package be.manager.remote;
 
+import be.dto.DeskDTO;
 import be.dto.FreeTimeDTO;
-import be.dto.LocDTO;
 import be.exceptions.BusinessException;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-public interface LocManagerRemote {
+public interface DeskManagerRemote {
 
-    LocDTO insertLoc(LocDTO locDTO) throws BusinessException;
+    DeskDTO insertDesk(DeskDTO deskDTO) throws BusinessException;
 
-    List<LocDTO> findAllLocuri();
+    List<DeskDTO> findAllDesks();
 
-    void deleteLocByPosition(String position) throws BusinessException;
+    void deleteDeskById(Integer id) throws BusinessException;
 
     List<FreeTimeDTO> findAllFreeTimes(Integer id);
 
 }
+*/

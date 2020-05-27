@@ -17,6 +17,8 @@ public class LocDTOEntityMapper {
         if (locDTO != null){
             loc.setID(locDTO.getID());
             loc.setQrCode(locDTO.getQrCode());
+            loc.setPozitie(locDTO.getPozitie());
+            loc.setValue(locDTO.getValue());
         }
         return loc;
     }
@@ -26,6 +28,8 @@ public class LocDTOEntityMapper {
         if (loc != null){
             locDTO.setID(loc.getID());
             locDTO.setQrCode(loc.getQrCode());
+            locDTO.setPozitie(loc.getPozitie());
+            locDTO.setValue(loc.getValue());
         }
         return locDTO;
     }

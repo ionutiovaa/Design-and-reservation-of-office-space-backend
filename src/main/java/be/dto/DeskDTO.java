@@ -1,20 +1,18 @@
+/*
 package be.dto;
 
 import java.io.Serializable;
 
-public class LocDTO implements Serializable {
+public class DeskDTO implements Serializable {
 
     private Integer ID;
     private String pozitie;
     private String qrCode;
     private Integer value;
 
-    public LocDTO() {
-    }
-
     @Override
     public String toString() {
-        return "LocDTO{" +
+        return "DeskDTO{" +
                 "ID=" + ID +
                 ", pozitie='" + pozitie + '\'' +
                 ", qrCode='" + qrCode + '\'' +
@@ -54,10 +52,14 @@ public class LocDTO implements Serializable {
         this.value = value;
     }
 
-    public LocDTO(Integer ID, String pozitie, String qrCode, Integer value) {
+    public DeskDTO(Integer ID, String pozitie, String qrCode, Integer value) {
         this.ID = ID;
         this.pozitie = pozitie;
         this.qrCode = qrCode;
         this.value = value;
     }
+
+    public DeskDTO() {
+    }
 }
+*/

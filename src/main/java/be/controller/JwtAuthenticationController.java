@@ -50,10 +50,10 @@ public class JwtAuthenticationController {
             //Set token
             loggedUser.setToken(t.getToken());
         }
-
+        System.out.println(token);
         return ResponseEntity.ok(loggedUser);
     }
-
+//fa un login
     private void authenticate(String username, String password) throws Exception {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));

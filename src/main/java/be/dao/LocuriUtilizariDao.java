@@ -7,20 +7,35 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
+import java.util.List;
+
 
 @Repository
 public interface LocuriUtilizariDao extends CrudRepository<LocuriUtilizari, Integer> {
 
-    @Query("select u.id from LocuriUtilizari.Utilizare u " +
+    /*@Query(value = "select u.id from Utilizare u " +
             "inner join LocuriUtilizari lu " +
-            "on u.id = lu.utilizare_id " +
+            "on u.id = lu.utilizare.id " +
             "inner join LocuriUtilizari.loc l " +
-            "on l.id = loc_id where loc_id = :id and (:startDate < u.final_date and :finalDate > u.start_date)")
+            "on l.id = lu.loc.id where lu.loc.id = :id and (:startDate < u.finalDate and :finalDate > u.startDate)", nativeQuery = true)
     int checkFree(
             @Param("id") Integer id,
             @Param("startDate") Date startDate,
             @Param("finalDate") Date finalDate
     );
+
+
+    @Query(value = "select u.id from Utilizare u " +
+            "inner join LocuriUtilizari lu " +
+            "on u.id = lu.utilizare.id " +
+            "inner join LocuriUtilizari.loc l " +
+            "on l.id = lu.loc.id where lu.loc.id = :id and (:startDate < u.finalDate and :finalDate > u.startDate)", nativeQuery = true)
+    int checkFree(
+            @Param("id") Integer id
+    );
+
+    @Query("select lu.utilizare.id from LocuriUtilizari lu where lu.loc.id = : id")
+    List<Integer> getIds(@Param("id") Integer id);*/
 
 
 

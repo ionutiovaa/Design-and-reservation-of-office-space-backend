@@ -2,6 +2,8 @@ package be.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "etaje")
@@ -15,21 +17,35 @@ public class Etaj implements Serializable {
     @Column(name = "numar")
     private Integer numar;
 
-    @Column(name = "nume")
-    private String nume;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Loc> locuri = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "id_sediu", referencedColumnName = "ID")
     private Sediu sediu;
 
-    @Override
+    /*@Override
     public String toString() {
         return "Etaj{" +
                 "ID=" + ID +
                 ", numar=" + numar +
-                ", nume='" + nume + '\'' +
+                ", locuri=" + locuri +
                 ", sediu=" + sediu +
                 '}';
+    }*/
+
+    public List<Loc> getLocuri() {
+        return locuri;
+    }
+
+    public void setLocuri(List<Loc> locuri) {
+        this.locuri = locuri;
+    }
+
+    public Etaj(Integer numar, List<Loc> locuri, Sediu sediu) {
+        this.numar = numar;
+        this.locuri = locuri;
+        this.sediu = sediu;
     }
 
     public Integer getID() {
@@ -48,14 +64,6 @@ public class Etaj implements Serializable {
         this.numar = numar;
     }
 
-    public String getNume() {
-        return nume;
-    }
-
-    public void setNume(String nume) {
-        this.nume = nume;
-    }
-
     public Sediu getSediu() {
         return sediu;
     }
@@ -65,12 +73,6 @@ public class Etaj implements Serializable {
     }
 
     public Etaj() {
-    }
-
-    public Etaj(Integer numar, String nume, Sediu sediu) {
-        this.numar = numar;
-        this.nume = nume;
-        this.sediu = sediu;
     }
 }
 

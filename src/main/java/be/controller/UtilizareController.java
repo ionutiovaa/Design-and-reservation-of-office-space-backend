@@ -37,4 +37,18 @@ public class UtilizareController {
         }
     }
 
+    /*@PostMapping(path = "/createUtilizare", produces = "application/json")
+    public ResponseEntity<?> saveUtilizare(@RequestBody UtilizareDTO utilizareDTO){
+        try{
+            DeskDTO desk = utilizareManagerRemote.insertUtilizare(utilizareDTO);
+            if (desk == null)
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This schedule already exists.");
+            if (desk.getID() != null)
+                return ResponseEntity.ok(desk);
+            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } catch (BusinessException e){
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }*/
+
 }

@@ -12,6 +12,8 @@ public interface UtilizareManagerRemote {
 
     LocDTO insertUtilizare(UtilizareDTO utilizareDTO) throws BusinessException;
 
+    //DeskDTO insertUtilizare(UtilizareDTO utilizareDTO) throws BusinessException;
+
     List<UtilizareDTO> findAllUtilizari();
 
     void deleteUtilizareById(Integer id) throws BusinessException;

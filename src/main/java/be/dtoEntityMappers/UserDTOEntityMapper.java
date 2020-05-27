@@ -29,6 +29,7 @@ public class UserDTOEntityMapper {
             user.setMobileNumber(userDTO.getMobileNumber());
             user.setUsername(userDTO.getUsername());
             user.setPassword(userDTO.getPassword());
+            user.setUserType(userDTO.getUserType());
             //user.setEchipe(userDTO.getEchipe());
             user.setEchipe(EchipaDTOEntityMapper.getAllEchipeSetFromDTO(userDTO.getEchipe()));
         }
@@ -46,6 +47,7 @@ public class UserDTOEntityMapper {
             userDTO.setUsername(user.getUsername());
             userDTO.setPassword(user.getPassword());
             userDTO.setEchipe(EchipaDTOEntityMapper.getAllEchipeDTOSetFromEchipe(user.getEchipe()));
+            userDTO.setUserType(user.getUserType());
             //userDTO.setEchipe(user.getEchipe());
         }
         return userDTO;

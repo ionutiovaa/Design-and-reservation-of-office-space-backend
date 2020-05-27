@@ -2,6 +2,8 @@ package be.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "sedii")
@@ -18,12 +20,20 @@ public class Sediu implements Serializable {
     @Column(name = "adresa")
     private String adresa;
 
+    @Column(name = "dimensions")
+    private String dimensions;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Etaj> etaje = new ArrayList<>();
+
     public Sediu() {
     }
 
-    public Sediu(String nume, String adresa) {
+    public Sediu(String nume, String adresa, String dimensions, List<Etaj> etaje) {
         this.nume = nume;
         this.adresa = adresa;
+        this.dimensions = dimensions;
+        this.etaje = etaje;
     }
 
     public Integer getID() {
@@ -50,12 +60,21 @@ public class Sediu implements Serializable {
         this.adresa = adresa;
     }
 
-    @Override
-    public String toString() {
-        return "Sediu{" +
-                "ID=" + ID +
-                ", nume='" + nume + '\'' +
-                ", adresa='" + adresa + '\'' +
-                '}';
+    public String getDimensions() {
+        return dimensions;
     }
+
+    public void setDimensions(String dimensions) {
+        this.dimensions = dimensions;
+    }
+
+    public List<Etaj> getEtaje() {
+        return etaje;
+    }
+
+    public void setEtaje(List<Etaj> etaje) {
+        this.etaje = etaje;
+    }
+
+
 }

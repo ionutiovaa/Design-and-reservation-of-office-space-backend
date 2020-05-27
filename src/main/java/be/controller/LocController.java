@@ -36,7 +36,7 @@ public class LocController {
         try{
             LocDTO loc = locManagerRemote.insertLoc(locDTO);
             if (loc == null)
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This desk already exists.");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This place already exists.");
             if (loc.getID() != null)
                 return ResponseEntity.ok(loc);
             else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -46,9 +46,9 @@ public class LocController {
     }
 
     @DeleteMapping(path = "/deleteLoc", produces = "application/json")
-    public ResponseEntity<?> deleteLoc(@RequestParam Integer id) {
+    public ResponseEntity<?> deleteLoc(@RequestParam String position) {
         try{
-            locManagerRemote.deleteLocById(id);
+            locManagerRemote.deleteLocByPosition(position);
             return ResponseEntity.ok(HttpStatus.OK);
         } catch (Exception e){
             e.printStackTrace();
@@ -62,5 +62,6 @@ public class LocController {
         ObjectMapper jsonTransformer = new ObjectMapper();
         return jsonTransformer.writeValueAsString(listOfFreeTimes);
     }*/
+
 
 }

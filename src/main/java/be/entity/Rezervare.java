@@ -1,3 +1,4 @@
+/*
 package be.entity;
 
 import be.entity.types.StareRezervare;
@@ -119,3 +120,4 @@ public class Rezervare implements Serializable {
         this.stareRezervare = stareRezervare;
     }
 }
+*/

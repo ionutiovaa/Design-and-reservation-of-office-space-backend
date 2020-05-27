@@ -61,7 +61,6 @@ public class JwtTokenUtil {
                 .setExpiration(expirationDate)
                 .signWith(SignatureAlgorithm.HS512, secret).compact();
     }
-
     //validate token
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = getUsernameFromToken(token);

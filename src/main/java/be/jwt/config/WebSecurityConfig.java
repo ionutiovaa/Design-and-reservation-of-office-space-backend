@@ -87,7 +87,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/locuri/getLocuri",
                         "/locuri/createLoc",
                         "/locuri/deleteLoc",
-                        "/utilizari/createUtilizare"
+                        "/utilizari/createUtilizare",
+                        "/desks/getDesks",
+                        "/desks/createDesk",
+                        "/desks/deleteDesk",
+                        "/etaje/createEtaj",
+                        "/etaje/floorsCount",
+                        "/etaje/deleteEtaj",
+                        "/sedii/getDimensions",
+                        "/sedii/updateDimensions"
 
                 )
                 .permitAll()

@@ -8,6 +8,7 @@ public class UtilizareDTO implements Serializable {
     private Integer ID;
     private String username;
     private Integer idLoc;
+    //private Integer idDesk;
     private Date startDate;
     private Date finalDate;
 
@@ -20,6 +21,22 @@ public class UtilizareDTO implements Serializable {
                 ", startDate=" + startDate +
                 ", finalDate=" + finalDate +
                 '}';
+    }
+
+    public UtilizareDTO(Integer ID, String username, Integer idLoc, Date startDate, Date finalDate) {
+        this.ID = ID;
+        this.username = username;
+        this.idLoc = idLoc;
+        this.startDate = startDate;
+        this.finalDate = finalDate;
+    }
+
+    public Integer getIdLoc() {
+        return idLoc;
+    }
+
+    public void setIdLoc(Integer idLoc) {
+        this.idLoc = idLoc;
     }
 
     public Integer getID() {
@@ -36,14 +53,6 @@ public class UtilizareDTO implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public Integer getIdLoc() {
-        return idLoc;
-    }
-
-    public void setIdLoc(Integer idLoc) {
-        this.idLoc = idLoc;
     }
 
     public Date getStartDate() {
@@ -65,11 +74,5 @@ public class UtilizareDTO implements Serializable {
     public UtilizareDTO() {
     }
 
-    public UtilizareDTO(Integer ID, String username, Integer idLoc, Date startDate, Date finalDate) {
-        this.ID = ID;
-        this.username = username;
-        this.idLoc = idLoc;
-        this.startDate = startDate;
-        this.finalDate = finalDate;
-    }
+
 }
