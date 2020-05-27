@@ -1167,7 +1167,7 @@
       <workItem from="1590496538422" duration="4943000" />
       <workItem from="1590512095474" duration="8887000" />
       <workItem from="1590528510332" duration="5816000" />
-      <workItem from="1590579739805" duration="3068000" />
+      <workItem from="1590579739805" duration="3667000" />
     </task>
     <task id="LOCAL-00001" summary="added jwt token">
       <created>1588296082671</created>
@@ -1236,7 +1236,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372199000" />
+    <option name="totallyTimeSpent" value="372798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
