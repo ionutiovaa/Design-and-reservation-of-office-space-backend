@@ -1,7 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="" />
+    <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="init locUtilizari">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/ForGetSchedulesDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/dto/SchedulesDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/entity/Mail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/service/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/LocController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/LocController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/UtilizareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/UtilizareController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/LocDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/LocDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/LocuriUtilizariDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/UtilizareDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/UtilizareDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dto/UtilizareDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dto/UtilizareDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UtilizareDTOEntityMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UtilizareDTOEntityMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Loc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Loc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/LocuriUtilizari.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/entity/Utilizare.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/entity/Utilizare.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/jwt/model/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/jwt/model/JwtTokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/LocManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/LocManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UserManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UtilizareManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UtilizareManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/remote/LocManagerRemote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/remote/LocManagerRemote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/remote/UtilizareManagerRemote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/remote/UtilizareManagerRemote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/DeskController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/EtajController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/EtajController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/LocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/LocController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/QRCodeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/ClientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/DepartamentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/DepartamentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/DeskDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/DesksUtilizariDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/EchipaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/EchipaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/EtajDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/EtajDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/LocDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/LocDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/LocuriUtilizariDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/ProiectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/ProiectDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/QRCodeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/TimeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/TokenDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/TokenDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dto/DeskDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dto/QRCodeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/DeskDTOEntityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/QRCodeDTOEntityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UtilizareDTOEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UtilizareDTOEntityMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Desk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/DesksUtilizari.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/LocuriUtilizari.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/DepartamentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/DepartamentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/DeskManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/EchipaManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/EchipaManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/ProiectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/ProiectManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/QRCodeManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/TokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/TokenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/DeskManagerRemote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/EchipaManagerRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/EchipaManagerRemote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/QRCodeManagerRemote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/repository/QRCodeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/service/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/service/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/service/DepartamentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/service/DepartamentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/service/QRCodeSerive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/service/QRCodeServiceImpl.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -12,7 +95,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Licentabe$C.ic" NAME="C Coverage Results" MODIFIED="1589478924186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Licentabe$C.ic" NAME="C Coverage Results" MODIFIED="1591033135079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.*</FILTER>
     </SUITE>
   </component>
@@ -90,32 +173,33 @@
     <session id="-695083636">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="85" />
+          <entry key="project.closed" value="101" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.16" value="6" />
+          <entry key="project.open.time.16" value="7" />
           <entry key="project.open.time.17" value="8" />
-          <entry key="project.open.time.18" value="8" />
+          <entry key="project.open.time.18" value="10" />
           <entry key="project.open.time.19" value="10" />
-          <entry key="project.open.time.2" value="5" />
-          <entry key="project.open.time.20" value="4" />
-          <entry key="project.open.time.21" value="4" />
+          <entry key="project.open.time.2" value="6" />
+          <entry key="project.open.time.20" value="5" />
+          <entry key="project.open.time.21" value="6" />
           <entry key="project.open.time.22" value="4" />
-          <entry key="project.open.time.23" value="8" />
-          <entry key="project.open.time.24" value="2" />
-          <entry key="project.open.time.25" value="6" />
-          <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.23" value="9" />
+          <entry key="project.open.time.24" value="4" />
+          <entry key="project.open.time.25" value="8" />
+          <entry key="project.open.time.26" value="3" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.30" value="1" />
-          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.34" value="2" />
           <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.39" value="2" />
           <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="87" />
+          <entry key="project.opened" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,11 +209,11 @@
           <entry key="controller" value="1" />
           <entry key="dao" value="1" />
           <entry key="entity" value="3" />
-          <entry key="gradle" value="15" />
+          <entry key="gradle" value="17" />
           <entry key="gradlew" value="2" />
           <entry key="impl" value="1" />
-          <entry key="java" value="1058" />
-          <entry key="properties" value="16" />
+          <entry key="java" value="1250" />
+          <entry key="properties" value="18" />
           <entry key="rezervari" value="1" />
           <entry key="saga_entry" value="1" />
           <entry key="sedii" value="1" />
@@ -143,10 +227,10 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Database Element" value="5" />
-          <entry key="Groovy" value="15" />
-          <entry key="JAVA" value="1058" />
+          <entry key="Groovy" value="17" />
+          <entry key="JAVA" value="1250" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Properties" value="16" />
+          <entry key="Properties" value="18" />
           <entry key="Scratch" value="1" />
           <entry key="UML" value="8" />
         </counts>
@@ -154,16 +238,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="26" />
-          <entry key="gradle" value="134" />
-          <entry key="java" value="33101" />
+          <entry key="gradle" value="148" />
+          <entry key="java" value="38728" />
           <entry key="properties" value="41" />
           <entry key="txt" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="134" />
-          <entry key="JAVA" value="33100" />
+          <entry key="Groovy" value="148" />
+          <entry key="JAVA" value="38727" />
           <entry key="PLAIN_TEXT" value="160" />
           <entry key="Properties" value="41" />
           <entry key="Spring Data QL" value="1" />
@@ -180,112 +264,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ClientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ClientServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/DepartamentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/DepartamentServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/EchipaService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/EchipaServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/MailService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-268">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ProiectService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ProiectServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/SediuController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/C.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="36" column="67" lean-forward="true" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/EtajController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/LocController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#723#724#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/SediuManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="97" column="48" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/ProiectManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1540">
-              <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/ClientController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="39" column="53" selection-start-line="29" selection-start-column="4" selection-end-line="39" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="100">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -303,16 +367,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>localho</find>
-      <find>port</find>
-      <find>frame</find>
-      <find>jackso</find>
-      <find>faster</find>
-      <find>bean</find>
-      <find>contex</find>
-      <find>web</find>
-      <find>commo</find>
-      <find>logi</find>
       <find>antm</find>
       <find>sec</find>
       <find>paren</find>
@@ -333,6 +387,16 @@
       <find>token</find>
       <find>512</find>
       <find>generateToken</find>
+      <find>th</find>
+      <find>forma</find>
+      <find>HttpStatus.OK</find>
+      <find>session</find>
+      <find>serv</find>
+      <find>ioan</find>
+      <find>ch</find>
+      <find>utili</find>
+      <find>logi</find>
+      <find>chec</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -521,9 +585,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6344274818031" />
+        <entry key="$PROJECT_DIR$" value="6347033545919" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3348078312" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="772822022" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2585518924" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="461050455" />
       </map>
@@ -712,57 +776,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/QRCodeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dto/QRCodeDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/QRCodeDTOEntityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/entity/QRCode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/QRCodeManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/QRCodeManagerRemote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/repository/QRCodeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/service/QRCodeSerive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/service/QRCodeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dto/FreeTimeDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UtilizareDTOEntityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/TimeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/entity/Rezervare.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UserDTOEntityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/controller/DeskController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/entity/Desk.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/entity/DesksUtilizari.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/entity/LocuriUtilizari.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dto/LocDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dto/DeskDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/DeskDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/DesksUtilizariDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/LocuriUtilizariDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/DeskDTOEntityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/DeskManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/DeskManagerRemote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/LocDTOEntityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/entity/Etaj.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/controller/LocController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/EtajMangerRemote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/controller/EtajController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/LocDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/EtajDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/entity/Sediu.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/SediuManagerRemote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/controller/SediuController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/SediuManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/SediuController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/entity/LocuriUtilizari.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/LocuriUtilizariDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/entity/Loc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dto/SchedulesDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dto/ForGetSchedulesDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/repository/DBConnection/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dto/XDTO.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/entity/Utilizare.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/ClientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/EtajController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/LocController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/DepartamentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/ClientDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/EchipaDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/EtajDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/LocDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/ProiectDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/TokenDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UtilizareDTOEntityMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/entity/Mail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/DepartamentManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/EchipaManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/ProiectManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/TokenManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/EchipaManagerRemote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/service/ClientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/service/DepartamentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/service/MailService.java" />
       </list>
     </option>
   </component>
@@ -772,11 +836,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
-    <option name="y" value="-10" />
     <option name="width" value="980" />
-    <option name="height" value="1060" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -784,6 +853,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -888,6 +959,26 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="be" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Licentabe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Licentabe" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="be" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Licentabe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Licentabe" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="be" type="462c0819:PsiDirectoryNode" />
               <item name="manager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -939,8 +1030,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -963,7 +1052,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590523181137" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591404966373" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="E:/Licenta" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1167,7 +1256,23 @@
       <workItem from="1590496538422" duration="4943000" />
       <workItem from="1590512095474" duration="8887000" />
       <workItem from="1590528510332" duration="5816000" />
-      <workItem from="1590579739805" duration="3667000" />
+      <workItem from="1590579739805" duration="6123000" />
+      <workItem from="1590599707749" duration="6260000" />
+      <workItem from="1590675584863" duration="681000" />
+      <workItem from="1590693453935" duration="2541000" />
+      <workItem from="1590828580255" duration="5383000" />
+      <workItem from="1590854809527" duration="82000" />
+      <workItem from="1590855021842" duration="14504000" />
+      <workItem from="1590933042441" duration="4132000" />
+      <workItem from="1590967939843" duration="732000" />
+      <workItem from="1591023543185" duration="3054000" />
+      <workItem from="1591033273790" duration="15803000" />
+      <workItem from="1591117397398" duration="13746000" />
+      <workItem from="1591181424574" duration="1278000" />
+      <workItem from="1591268639525" duration="1264000" />
+      <workItem from="1591275721922" duration="1564000" />
+      <workItem from="1591308465228" duration="624000" />
+      <workItem from="1591356785660" duration="17203000" />
     </task>
     <task id="LOCAL-00001" summary="added jwt token">
       <created>1588296082671</created>
@@ -1236,7 +1341,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372798000" />
+    <option name="totallyTimeSpent" value="464105000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1250,7 +1355,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.23691276" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.2295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1260,18 +1365,18 @@
       <window_info id="Web" order="7" sideWeight="0.50165564" side_tool="true" weight="0.22013423" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.34685314" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6295302" weight="0.46293706" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28671327" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6295302" weight="0.4965035" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38041958" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Spring" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.13566433" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32867134" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33846155" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5944056" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3704698" side_tool="true" weight="0.5356643" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.21538462" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.1944056" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32867134" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.16503496" />
@@ -1280,14 +1385,15 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.4993007" visible="true" weight="0.0" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.0" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="right" id="JSF" order="10" />
       <window_info anchor="right" id="CDI" order="11" />
-      <window_info anchor="right" id="Database" order="12" visible="true" weight="0.0" />
+      <window_info anchor="right" id="Database" order="12" weight="0.0" />
+      <window_info anchor="right" id="Coverage" order="13" sideWeight="0.5006993" side_tool="true" visible="true" weight="0.0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1312,320 +1418,273 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/LoginController.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/EchipaDTOEntityMapper.java</url>
           <line>44</line>
           <properties />
           <option name="timeStamp" value="128" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="146" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="147" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/DeskController.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="153" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/DeskController.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="154" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="156" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java</url>
-          <line>108</line>
-          <properties />
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/EtajController.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/EtajController.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="165" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="166" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java</url>
-          <line>58</line>
-          <properties />
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/LocController.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/be/controller/SediuController.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="174" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/DeskManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/DepartamentDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2060">
-          <caret line="103" column="59" selection-start-line="103" selection-start-column="59" selection-end-line="103" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Departament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/LocuriUtilizari.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Proiect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/QRCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Rezervare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="113" column="72" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Desk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="192">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/ClientDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/EchipaDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="332">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/DepartamentDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/EtajDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="160">
+          <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/EchipaController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/LocDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/ProiectDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/TokenDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dto/AddProiectToEchipaDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-188">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dto/ForGetSchedulesDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="33" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dto/UtilizareDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="-180">
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+          <folding>
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/ClientDTOEntityMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="80">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Echipa.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/LocuriUtilizari.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+        <state>
+          <folding>
+            <element signature="e#0#1339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UtilizareDTOEntityMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="e#208#209#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="92" column="47" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/model/JwtTokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/service/JwtService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/ClientManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/DepartamentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/EchipaManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="53" column="39" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/ProiectManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="133" column="37" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/SediuManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/TokenManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/TokenManagerRemote.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-502">
+          <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="97" column="27" lean-forward="true" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/ClientManagerRemote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Pozitie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/DeskController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/DeskManagerRemote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#0#2079#0" expanded="true" />
+            <element signature="e#0#467#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1637,31 +1696,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/ClientManagerRemote.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/EchipaManagerRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="97" selection-start-line="22" selection-start-column="97" selection-end-line="22" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/EtajMangerRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/ClientManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/ProiectDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dto/LocDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1672,192 +1724,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/LocManagerRemote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/EtajMangerRemote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Loc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="88" column="35" lean-forward="true" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Etaj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/LocDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/LocManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/EtajDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/entity/Sediu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="55" lean-forward="true" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding>
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/SediuManagerRemote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        <state relative-caret-position="100">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/TokenManagerRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/UserManagerRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="17" column="90" selection-start-line="17" selection-start-column="90" selection-end-line="17" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/SediuManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/repository/ClientRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ClientService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="97" column="48" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
+        <state relative-caret-position="80">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/ProiectManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ClientServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="79" />
+        <state relative-caret-position="200">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/ClientController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/DepartamentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        <state relative-caret-position="80">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/SediuDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/DepartamentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="160">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/dao/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/EchipaService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="39" column="53" selection-start-line="29" selection-start-column="4" selection-end-line="39" selection-end-column="53" />
+        <state relative-caret-position="80">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/manager/impl/EtajManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/EchipaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/EtajController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/MailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-268">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/LocController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ProiectService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/controller/SediuController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/service/ProiectServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="36" column="67" lean-forward="true" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/C.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>

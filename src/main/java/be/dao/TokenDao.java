@@ -11,12 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 public interface TokenDao extends CrudRepository<Token, Integer> {
 
-    //@Query(value = "SELECT t.username FROM Token t WHERE t.token = ?1")
     Token findByToken(String token);
-
-    Token findByUsername(String username);
-
-    Token findByID(Integer id);
 
     @Query(value = "SELECT t from Token t where t.username = ?1")
     Token login(String username);

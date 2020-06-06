@@ -15,7 +15,6 @@ public class ClientServiceImpl implements ClientService{
     private ClientRepository clientRepository;
 
     @Override
-    //@Transactional
     public void save(Client client) {
         clientRepository.save(client);
     }

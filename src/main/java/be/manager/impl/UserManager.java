@@ -2,6 +2,7 @@ package be.manager.impl;
 
 import be.dao.EchipaDao;
 import be.dao.UserDao;
+import be.dao.UtilizareDao;
 import be.dto.AddUserToEchipaDTO;
 import be.dto.ChangePasswordDTO;
 import be.dto.EchipaDTO;
@@ -9,10 +10,12 @@ import be.dto.UserDTO;
 import be.dtoEntityMappers.EchipaDTOEntityMapper;
 import be.dtoEntityMappers.UserDTOEntityMapper;
 import be.entity.Echipa;
+import be.entity.Mail;
 import be.entity.User;
 import be.entity.types.UserType;
 import be.exceptions.BusinessException;
 import be.manager.remote.UserManagerRemote;
+import be.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -29,6 +32,9 @@ public class UserManager implements UserManagerRemote {
     @Autowired
     private EchipaDao echipaDao;
 
+    @Autowired
+    private UtilizareDao utilizareDao;
+
     public UserDao getUserDao() {
         return userDao;
     }
@@ -40,11 +46,15 @@ public class UserManager implements UserManagerRemote {
         User userFounded = userDao.findUserByUsername(userDTO.getUsername());
         if (userFounded != null)
             return null;
-        /*if (userDTO.getUsername().isEmpty() || userDTO.getPassword().isEmpty())
-            return null;*/
         User user = createUserToInsert(userDTO);
         User persistedUser = userDao.save(user);
         UserDTO dtoPersisted = UserDTOEntityMapper.getDTOFromUser(persistedUser);
+        String name = userDTO.getFirstName() + " " + userDTO.getLastName();
+        Mail mail = new Mail(userDTO.getEmail(), "Organizare birouri", "Hello, " + name + "\n" +
+                "Welcome to Organizare birouri!\n" +
+                "Thank you for choosing to use this application!\n" +
+                "Enjoy it!");
+        MailService.sendMail(mail);
         return dtoPersisted;
     }
 
@@ -111,6 +121,10 @@ public class UserManager implements UserManagerRemote {
     @Override
     public UserDTO deleteUserById(Integer id) throws BusinessException {
         User user = userDao.findAllByID(id);
+        List<Integer> utilizari = utilizareDao.getIdUtilizariByUser(user.getID());
+        utilizari.forEach(integer -> utilizareDao.deleteFromLocuriUtilizariByUtilizare_id(integer));
+        utilizareDao.deleteUtilizareByUser_id(user.getID());
+
         if (user == null)
             return null;
         UserDTO deletedUser = UserDTOEntityMapper.getDTOFromUser(user);

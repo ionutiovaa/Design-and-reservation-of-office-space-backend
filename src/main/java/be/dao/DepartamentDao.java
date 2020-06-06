@@ -18,15 +18,7 @@ public interface DepartamentDao extends CrudRepository<Departament, Integer> {
 
     Departament findDepartamentByNume(String nume);
 
-    Departament findDepartamentByID(Integer id);
-
-    Departament findDepartamentByUser(User user);
-
     List<Departament> findAll();
-
-    void deleteDepartamentByNume(String nume);
-
-    void deleteDepartamentByUser(User user);
 
     @Transactional
     @Modifying

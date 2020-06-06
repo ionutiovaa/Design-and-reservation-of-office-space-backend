@@ -1,16 +1,17 @@
 package be.controller;
 
-import be.dto.LocDTO;
-import be.dto.UtilizareDTO;
+import be.dto.*;
 import be.exceptions.BusinessException;
 import be.manager.remote.UtilizareManagerRemote;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/utilizari")
@@ -24,31 +25,33 @@ public class UtilizareController {
     }
 
     @PostMapping(path = "/createUtilizare", produces = "application/json")
-    public ResponseEntity<?> saveUtilizare(@RequestBody UtilizareDTO utilizareDTO){
+    public  ResponseEntity<?> saveUtilizare(@RequestBody UtilizareDTO utilizareDTO){
         try{
-            LocDTO loc = utilizareManagerRemote.insertUtilizare(utilizareDTO);
-            if (loc == null)
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This schedule already exists.");
-            if (loc.getID() != null)
-                return ResponseEntity.ok(loc);
-            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        } catch (BusinessException e){
+            String utilizare = utilizareManagerRemote.insertUtilizare(utilizareDTO);
+            if (utilizare.equals(""))
+                return new ResponseEntity<>(
+                        "Not found",
+                        HttpStatus.NOT_FOUND);
+            if (utilizare.equals("This schedule exists already"))
+                return new ResponseEntity<>(
+                        "This schedule exists already.",
+                        HttpStatus.BAD_REQUEST);
+            return ResponseEntity.ok(HttpStatus.OK);
+        } catch (BusinessException | ParseException e){
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 
-    /*@PostMapping(path = "/createUtilizare", produces = "application/json")
-    public ResponseEntity<?> saveUtilizare(@RequestBody UtilizareDTO utilizareDTO){
-        try{
-            DeskDTO desk = utilizareManagerRemote.insertUtilizare(utilizareDTO);
-            if (desk == null)
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This schedule already exists.");
-            if (desk.getID() != null)
-                return ResponseEntity.ok(desk);
-            else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        } catch (BusinessException e){
-            return ResponseEntity.status(500).body(e.getMessage());
-        }
-    }*/
+    @PostMapping(path = "/getUtilizariByDate", produces = "application/json")
+    public String getUtilizariByDateAndDesk(@RequestBody ForGetSchedulesDTO forGetSchedulesDTO) throws IOException, BusinessException {
+        List<SchedulesDTO> listOfAllSchedules = this.utilizareManagerRemote.findAllSchedules(forGetSchedulesDTO);
+        ObjectMapper jsonTransformer = new ObjectMapper();
+        return jsonTransformer.writeValueAsString(listOfAllSchedules);
+    }
+
+    @PostMapping(path = "/checkFree", produces = "application/json")
+    public ResponseEntity<Boolean> getUserType(@RequestBody UtilizareDTO utilizareDTO) throws BusinessException, ParseException {
+        return new ResponseEntity<Boolean>(utilizareManagerRemote.checkFree(utilizareDTO), HttpStatus.OK);
+    }
 
 }

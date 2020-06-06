@@ -86,7 +86,6 @@ public class DepartamentManager implements DepartamentManagerRemote {
             return DepartamentDTOEntityMapper.getDTOAfterUpdateResponsabil(departament);
         }
         else
-            //throw new BusinessException("Name error", "The old name is wrong");
             return null;
     }
 

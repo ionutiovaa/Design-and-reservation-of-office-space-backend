@@ -8,12 +8,15 @@ public class UtilizareDTOEntityMapper {
     private UtilizareDTOEntityMapper(){
     }
 
-    /*public static Utilizare getUtilizareFromUtilizareDTO(UtilizareDTO utilizareDTO){
-        Utilizare utilizare = new Utilizare();
-        if (utilizareDTO != null){
-            utilizare.setID(utilizareDTO.getID());
-            utilizare.setUser(utilizareDTO.getUsername());
+    public static UtilizareDTO getDTOFromUtilizare(Utilizare utilizare){
+        UtilizareDTO utilizareDTO = new UtilizareDTO();
+        if (utilizare != null){
+            utilizareDTO.setID(utilizare.getID());
+            utilizareDTO.setUsername(utilizare.getUser().getUsername());
+            utilizareDTO.setStartDate(utilizare.getStartDate().toString());
+            utilizareDTO.setFinalDate(utilizare.getFinalDate().toString());
         }
-    }*/
+        return utilizareDTO;
+    }
 
 }

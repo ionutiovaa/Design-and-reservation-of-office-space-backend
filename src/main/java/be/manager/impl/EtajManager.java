@@ -52,6 +52,5 @@ public class EtajManager implements EtajMangerRemote {
     public Integer getNumberOfFloorsBySediu(Integer id) throws BusinessException {
         Sediu sediu = sediuDao.findSediuByID(id);
         return sediu.getEtaje().size();
-        //return etajDao.getNumberOfFloorsBySediu(1);
     }
 }

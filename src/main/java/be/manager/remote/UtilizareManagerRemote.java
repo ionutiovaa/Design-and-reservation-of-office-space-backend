@@ -1,21 +1,20 @@
 package be.manager.remote;
 
-import be.dto.LocDTO;
-import be.dto.UtilizareDTO;
+import be.dto.*;
+import be.entity.Loc;
 import be.exceptions.BusinessException;
 import org.springframework.stereotype.Component;
 
+import java.text.ParseException;
 import java.util.List;
 
 @Component
 public interface UtilizareManagerRemote {
 
-    LocDTO insertUtilizare(UtilizareDTO utilizareDTO) throws BusinessException;
+    String insertUtilizare(UtilizareDTO utilizareDTO) throws BusinessException, ParseException;
 
-    //DeskDTO insertUtilizare(UtilizareDTO utilizareDTO) throws BusinessException;
+    List<SchedulesDTO> findAllSchedules(ForGetSchedulesDTO forGetSchedulesDTO) throws BusinessException;
 
-    List<UtilizareDTO> findAllUtilizari();
-
-    void deleteUtilizareById(Integer id) throws BusinessException;
+    Boolean checkFree(UtilizareDTO utilizareDTO) throws BusinessException, ParseException;
 
 }

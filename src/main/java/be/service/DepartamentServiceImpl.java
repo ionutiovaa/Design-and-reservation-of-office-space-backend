@@ -13,7 +13,6 @@ public class DepartamentServiceImpl implements DepartamentService {
     @Autowired
     DepartamentRepository departamentRepository;
 
-
     @Override
     public void save(Departament departament) {
         departamentRepository.save(departament);

@@ -3,7 +3,6 @@ package be.controller;
 import be.entity.Etaj;
 import be.exceptions.BusinessException;
 import be.manager.remote.EtajMangerRemote;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +25,6 @@ public class EtajController {
     public ResponseEntity<?> saveEtaj(){
         try{
             Etaj etaj = etajMangerRemote.insertEtaj();
-            /*if (etaj == null)
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This floor already exists.");*/
             if (etaj.getID() != null)
                 return ResponseEntity.ok(etaj);
             else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
