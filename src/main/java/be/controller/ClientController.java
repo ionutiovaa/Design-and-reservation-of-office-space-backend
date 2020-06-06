@@ -11,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.List;
 
@@ -45,7 +44,6 @@ public class ClientController {
         }
     }
 
-    //O POT STERGE
     @GetMapping(path = "/getClientById/{id}", produces = "application/json")
     public String getClientById(@PathVariable("id") Integer id){
         try{

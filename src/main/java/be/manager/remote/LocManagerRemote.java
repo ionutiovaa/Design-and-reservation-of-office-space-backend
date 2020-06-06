@@ -14,6 +14,8 @@ public interface LocManagerRemote {
 
     List<LocDTO> findAllLocuri();
 
+    List<LocDTO> findAllLocuriByEtaj(Integer etaj);
+
     void deleteLocByPosition(String position) throws BusinessException;
 
     List<FreeTimeDTO> findAllFreeTimes(Integer id);

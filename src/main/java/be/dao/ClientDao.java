@@ -21,11 +21,6 @@ public interface ClientDao extends CrudRepository<Client, Integer> {
 
     Client findClientByID(Integer id);
 
-    /*@Override
-    void delete(Client entity);*/
-
-    void deleteClientByNume(String nume);
-
     @Transactional
     @Modifying
     @Query("UPDATE Client c " +

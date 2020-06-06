@@ -16,9 +16,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 public class JwtTokenUtil {
 
     // Five hours
-    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+    //public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
 
     //60*60*60*24* nr de zile
+    public static final long JWT_TOKEN_VALIDITY = 60 * 60 * 60 * 24 * 200;
 
     @Value("${jwt.secret}")
     private String secret;

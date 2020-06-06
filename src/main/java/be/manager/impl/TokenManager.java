@@ -18,10 +18,7 @@ public class TokenManager implements TokenManagerRemote {
 
     @Override
     public TokenDTO findTokenByToken(String token) {
-        //Optional tokenFound = tokenDao.findByToken(token);
         Token tokenFound = tokenDao.findByToken(token);
-        //Token tokenCasted = (Token) tokenFound.get();
-        //TokenDTO tokenDTO = TokenDTOEntityMapper.getDTOFromToken(tokenCasted);
         TokenDTO tokenDTO = TokenDTOEntityMapper.getDTOFromToken(tokenFound);
         return tokenDTO;
     }

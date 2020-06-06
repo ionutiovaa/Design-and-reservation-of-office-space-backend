@@ -1,6 +1,5 @@
 package be.controller;
 
-import be.dto.FreeTimeDTO;
 import be.dto.LocDTO;
 import be.exceptions.BusinessException;
 import be.manager.remote.LocManagerRemote;
@@ -31,6 +30,13 @@ public class LocController {
         return jsonTransformer.writeValueAsString(listOfAllLocuri);
     }
 
+    @GetMapping(path = "/getLocuriByEtaj", produces = "application/json")
+    public String getLocuri(@RequestParam Integer etaj) throws IOException {
+        List<LocDTO> listOfAllLocuri = this.locManagerRemote.findAllLocuriByEtaj(etaj);
+        ObjectMapper jsonTransformer = new ObjectMapper();
+        return jsonTransformer.writeValueAsString(listOfAllLocuri);
+    }
+
     @PostMapping(path = "/createLoc", produces = "application/json")
     public ResponseEntity<?> saveLoc(@RequestBody LocDTO locDTO){
         try{
@@ -55,13 +61,6 @@ public class LocController {
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
-
-    /*@GetMapping(path = "/getFreeTimes", produces = "application/json")
-    public String getFreeTimes(@RequestParam Integer id) throws IOException {
-        List<FreeTimeDTO> listOfFreeTimes = this.locManagerRemote.findAllFreeTimes();
-        ObjectMapper jsonTransformer = new ObjectMapper();
-        return jsonTransformer.writeValueAsString(listOfFreeTimes);
-    }*/
 
 
 }

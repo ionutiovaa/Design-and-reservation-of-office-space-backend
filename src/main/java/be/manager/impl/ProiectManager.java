@@ -132,9 +132,6 @@ public class ProiectManager implements ProiectManagerRemote {
         Set<Proiect> proiects = echipa.getProiecte();
         proiects.add(proiect);
         echipa.setProiecte(proiects);
-
-
-        //echipa.getProiecte().add(proiect);
         echipaDao.save(echipa);
         EchipaDTO dtoPersisted = EchipaDTOEntityMapper.getDTOFromEchipa(echipa);
         return dtoPersisted;

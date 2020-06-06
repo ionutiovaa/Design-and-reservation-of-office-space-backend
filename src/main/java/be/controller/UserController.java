@@ -10,11 +10,9 @@ import be.manager.remote.UserManagerRemote;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.ws.rs.core.Response;
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
 import java.util.List;
@@ -102,7 +100,6 @@ public class UserController extends HttpServlet {
             return ResponseEntity.status(500).body(e.getMessage());
         }
     }
-
 
     @GetMapping(path = "/getUserType", produces = "application/json")
     public ResponseEntity<UserType> getUserType(@RequestParam String username) throws BusinessException {

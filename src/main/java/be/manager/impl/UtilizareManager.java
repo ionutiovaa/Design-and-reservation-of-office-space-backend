@@ -1,29 +1,24 @@
 package be.manager.impl;
 
 import be.dao.LocDao;
-import be.dao.LocuriUtilizariDao;
 import be.dao.UserDao;
 import be.dao.UtilizareDao;
-import be.dto.FreeTimeDTO;
-import be.dto.LocDTO;
-import be.dto.UtilizareDTO;
-import be.dtoEntityMappers.LocDTOEntityMapper;
+import be.dto.*;
+import be.dtoEntityMappers.UtilizareDTOEntityMapper;
 import be.entity.Loc;
+import be.entity.Mail;
 import be.entity.User;
 import be.entity.Utilizare;
+import be.entity.types.UserType;
 import be.exceptions.BusinessException;
 import be.manager.remote.UtilizareManagerRemote;
+import be.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.*;
-import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Logger;
 
 @Component
@@ -38,97 +33,71 @@ public class UtilizareManager implements UtilizareManagerRemote {
     @Autowired
     private LocDao locDao;
 
-    @Autowired
-    private LocuriUtilizariDao locuriUtilizariDao;
-
     private Logger logger = Logger.getLogger(UtilizareManager.class.getName());
 
-    private static java.sql.Date convertUtilToSql(Date uDate){
-        java.sql.Date sDate = new java.sql.Date(uDate.getTime());
-        return sDate;
-    }
-
-    private static EntityManagerFactory createEM(){
-        Properties properties = new Properties();
-        properties.setProperty("spring.datasource.url", "jdbc:mysql://localhost:3306/licentabe");
-        properties.setProperty("spring.datasource.username", "iova");
-        properties.setProperty("spring.datasource.password", "asasiasa123");
-        properties.setProperty("spring.datasource.driver-class-name", "com.mysql.cj.jdbc.Driver");
-        EntityManagerFactory entityManager = Persistence.createEntityManagerFactory("jdbc:mysql://localhost:3306/licentabe", properties);
-        return entityManager;
-    }
-
-    /*@PersistenceContext
-    EntityManager entityManager;*/
-
-    private int checkFree(Integer id, String startDate, String finalDate){
-        EntityManagerFactory entityManagerFactory = createEM();
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        Query query = entityManager.createNativeQuery("select u.id from utilizari u inner join locuri_utilizari lu on u.id = lu.utilizari_id " +
-                "inner join locuri l on lu.loc_id = l.id where lu.loc_id = ? and (? < u.final_date and ? > u.start_date)");
-        query.setParameter(1, id);
-        query.setParameter(2, startDate);
-        query.setParameter(3, finalDate);
-        int idB = (int) query.getSingleResult();
-        return idB;
-    }
-
-    private int ver(String data){
-        EntityManagerFactory entityManagerFactory = createEM();
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        Query query = entityManager.createNativeQuery("select u.id from utilizari u where ? > u.start_date");
-        query.setParameter(1, data);
-        int re = query.getFirstResult();
-        return re;
-    }
-
     @Override
-    public LocDTO insertUtilizare(UtilizareDTO utilizareDTO) throws BusinessException {
-        //List<FreeTimeDTO> freeTimeList = locDao.findAllFreeTimes(utilizareDTO.getIdLoc());
-        //int free = locDao.checkFree(utilizareDTO.getIdLoc(), utilizareDTO.getStartDate(), utilizareDTO.getFinalDate());
-        //if (free != 0)
-        //    return null;
-        int id = utilizareDTO.getIdLoc();
-        //List<Integer> list = locuriUtilizariDao.getIds(id);
-
-
-        //Date startDate = utilizareDTO.getStartDate();
-        //Date finalDate = utilizareDTO.getFinalDate();
-        //java.sql.Date startDateSQL = convertUtilToSql(startDate);
-
-        //java.sql.Date finalDateSQL = convertUtilToSql(finalDate);
-        //DateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
-        //String d = dateFormat.format(startDate);
-        //String df = dateFormat.format(startDate);
-        //int r = ver(d);
-
-        //int free = locuriUtilizariDao.checkFree(utilizareDTO.getIdLoc(), d, df);
-        /*int free = checkFree(utilizareDTO.getIdLoc(), d, df);
-        if (free != 0)
-            return null;*/
+    public String insertUtilizare(UtilizareDTO utilizareDTO) throws BusinessException, ParseException {
+        Loc loc = locDao.findLocByPozitie(utilizareDTO.getPosition());
         User user = userDao.findUserByUsername(utilizareDTO.getUsername());
-        Loc loc = locDao.findAllByID(utilizareDTO.getIdLoc());
-        if (user == null)
-            throw new BusinessException("Not found", "The username is wrong");
-        Utilizare utilizare = new Utilizare();
-        utilizare.setUser(user);
-        utilizare.setStartDate(utilizareDTO.getStartDate());
-        utilizare.setFinalDate(utilizareDTO.getFinalDate());
+        if (loc == null || user == null)
+            return "";
+        if (!checkFree(utilizareDTO))
+            return "This schedule exists already";
+
+
+        if (user.getUserType().equals(UserType.ADMINISTRATOR.toString())){
+            String name = user.getFirstName() + " " + user.getLastName();
+            MailService.sendMail(new Mail(user.getEmail(), "Organizare birouri", "Hello, " + name + "\n" +
+                    "The office was booked in the interval: " + utilizareDTO.getStartDate() + " - " + utilizareDTO.getFinalDate() + "!\n" +
+                    "Details: \n" +
+                    "Floor: " + loc.getEtaj().getNumar()));
+        }
+        else {
+            User administrator = userDao.findUserByUserType(UserType.ADMINISTRATOR);
+            String name = user.getFirstName() + " " + user.getLastName();
+            MailService.sendMail(new Mail(user.getEmail(), "Organizare birouri", "Hello, " + name + "!\n" +
+                    "The office was booked in the interval: " + utilizareDTO.getStartDate() + " - " + utilizareDTO.getFinalDate() + "!\n" +
+                    "Details: \n" +
+                    "Floor: " + loc.getEtaj().getNumar()));
+            MailService.sendMail(new Mail(administrator.getEmail(), "Organizare birouri", "Hello, " + administrator.getFirstName() +
+                    " " + administrator.getLastName() + "!\n" + name + " booked an office in the interval: " +
+                    utilizareDTO.getStartDate() + " - " + utilizareDTO.getFinalDate() + "!\n" +
+                    "Details: \n" +
+                    "Floor: " + loc.getEtaj().getNumar()));
+        }
+
+
+        Date startDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(utilizareDTO.getStartDate());
+        Date endDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(utilizareDTO.getFinalDate());
+        Utilizare utilizare = new Utilizare(user, startDate, endDate, loc);
         utilizareDao.save(utilizare);
-        Set<Utilizare> utilizari = loc.getUtilizari();
-        utilizari.add(utilizare);
+        loc.getUtilizari().add(utilizare);
         locDao.save(loc);
-        LocDTO dtoPersisted = LocDTOEntityMapper.getDTOFromLoc(loc);
-        return dtoPersisted;
+        UtilizareDTO dtoPersisted = UtilizareDTOEntityMapper.getDTOFromUtilizare(utilizare);
+        return "ok";
     }
 
     @Override
-    public List<UtilizareDTO> findAllUtilizari() {
-        return null;
+    public List<SchedulesDTO> findAllSchedules(ForGetSchedulesDTO forGetSchedulesDTO) throws BusinessException {
+        Loc loc = locDao.findLocByPozitie(forGetSchedulesDTO.getPosition());
+        List<String> allStartDates = utilizareDao.findAllSchedulesStartDate(forGetSchedulesDTO.getDate(), loc.getID());
+        List<String> allEndDates = utilizareDao.findAllSchedulesEndDate(forGetSchedulesDTO.getDate(), loc.getID());
+        List<SchedulesDTO> schedulesDTOList = new ArrayList<>();
+        for (int i = 0; i < allStartDates.size(); i++) {
+            schedulesDTOList.add(new SchedulesDTO(allStartDates.get(i), allEndDates.get(i)));
+        }
+        return schedulesDTOList;
     }
 
     @Override
-    public void deleteUtilizareById(Integer id) throws BusinessException {
-
+    public Boolean checkFree(UtilizareDTO utilizareDTO) throws BusinessException, ParseException {
+        Loc loc = locDao.findLocByPozitie(utilizareDTO.getPosition());
+        Date startDatee = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(utilizareDTO.getStartDate());
+        Date endDatee = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(utilizareDTO.getFinalDate());
+        List<Utilizare> id = utilizareDao.findAllByLocAndStartDateIsLessThanAndFinalDateIsGreaterThan(loc, endDatee, startDatee);
+        if (id.size() == 0)
+            return true;
+        return false;
     }
+
 }

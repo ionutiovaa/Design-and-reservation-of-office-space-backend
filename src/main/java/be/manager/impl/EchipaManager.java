@@ -39,17 +39,6 @@ public class EchipaManager implements EchipaManagerRemote {
         EchipaDTO dtoPersisted = new EchipaDTO();
         echipa = new Echipa();
         echipa.setNume(echipaDTO.getNume());
-
-
-        /*Set<Proiect> projects = new HashSet<>();
-        echipaDTO.getProiecte().forEach(proiectDTO -> {
-            Proiect proiect = proiectDao.findProiectByNume(proiectDTO.getNume());
-            projects.add(proiect);
-        });*/
-        //echipa.setProiecte(projects);
-
-
-        //echipa.setProiecte(ProiectDTOEntityMapper.getProiectSetFromDTO(echipaDTO.getProiecte()));
         Echipa persistedEchipa = echipaDao.save(echipa);
         dtoPersisted = EchipaDTOEntityMapper.getDTOFromEchipa(persistedEchipa);
         return dtoPersisted;
@@ -94,15 +83,4 @@ public class EchipaManager implements EchipaManagerRemote {
         else
             throw new BusinessException("Name error", "The old name is wrong");
     }
-
-    /*@Override
-    public EchipaDTO addProiectToEchipa(AddProiectToEchipaDTO addProiectToEchipaDTO) throws BusinessException {
-        Proiect proiect = proiectDao.findProiectByNume(addProiectToEchipaDTO.getNumeProiect());
-        Echipa echipa = echipaDao.findEchipaByNume(addProiectToEchipaDTO.getNumeEchipa());
-        if (proiect == null || echipa == null)
-            return null;
-        echipa.getProiecte().add(proiect);
-        EchipaDTO dtoPersisted = EchipaDTOEntityMapper.getDTOAfterInsertProiect(echipa);
-        return dtoPersisted;
-    }*/
 }

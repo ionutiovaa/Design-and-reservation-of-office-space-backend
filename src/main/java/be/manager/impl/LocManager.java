@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.logging.Logger;
@@ -38,27 +39,14 @@ public class LocManager implements LocManagerRemote {
 
     private Logger logger = Logger.getLogger(LocManager.class.getName());
 
-    /*@Override
-    public LocDTO insertLoc(LocDTO locDTO) throws BusinessException {
-        Loc loc = locDao.findLocByPozitie(locDTO.getPozitie());
-        if (loc != null)
-            return null;
-        LocDTO dtoPersisted = new LocDTO();
-        loc = new Loc();
-        loc.setQrCode(locDTO.getQrCode());
-        loc.setPozitie(locDTO.getPozitie());
-        loc.setValue(locDTO.getValue());
-        Loc persistedLoc = locDao.save(loc);
-        dtoPersisted = LocDTOEntityMapper.getDTOFromLoc(persistedLoc);
-        return dtoPersisted;
-    }*/
-
     @Override
     public LocDTO insertLoc(LocDTO locDTO) throws BusinessException {
-        //Sediu sediu = sediuDao.findSediuByID(1);
+        Loc locFounded = locDao.findLocByPozitie(locDTO.getPozitie());
+        if (locFounded != null)
+            throw new BusinessException("Invalid request", "This place exists already.");
         String[] pozitii = locDTO.getPozitie().split(":");
         Etaj etaj = etajDao.findEtajByNumar(Integer.parseInt(pozitii[0]));
-        Loc loc = new Loc(locDTO.getPozitie(), locDTO.getQrCode(), locDTO.getValue(), etaj, new HashSet<>());
+        Loc loc = new Loc(locDTO.getPozitie(), locDTO.getQrCode(), locDTO.getValue(), etaj, new ArrayList<>());
         locDao.save(loc);
         List<Loc> locuri = etaj.getLocuri();
         locuri.add(loc);
@@ -73,6 +61,13 @@ public class LocManager implements LocManagerRemote {
     }
 
     @Override
+    public List<LocDTO> findAllLocuriByEtaj(Integer etaj) {
+        Etaj etajFounded = etajDao.findEtajByNumar(etaj);
+        List<Loc> locuri = locDao.findAllByEtaj(etajFounded);
+        return LocDTOEntityMapper.getAllLocuri(locuri);
+    }
+
+    @Override
     public void deleteLocByPosition(String position) throws BusinessException {
         Integer etajNumber = Integer.valueOf(position.split(":")[0]);
         Etaj etaj = etajDao.findEtajByNumar(etajNumber);
@@ -80,8 +75,6 @@ public class LocManager implements LocManagerRemote {
         etaj.getLocuri().remove(loc);
         etajDao.save(etaj);
         locDao.deleteLocByPozitie(position);
-        /*Loc loc = locDao.findLocByPozitie(position);
-        locDao.delete(loc);*/
     }
 
     @Override

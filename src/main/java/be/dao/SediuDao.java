@@ -13,10 +13,6 @@ public interface SediuDao extends CrudRepository<Sediu, Integer> {
 
     Sediu findSediuByID(Integer id);
 
-    Sediu findSediuByAdresa(String adresa);
-
-    Sediu findSediuByNume(String nume);
-
     @Transactional
     @Modifying
     @Query("UPDATE Sediu s SET dimensions = :dimensions " +

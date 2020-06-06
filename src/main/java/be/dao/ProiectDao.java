@@ -1,7 +1,5 @@
 package be.dao;
 
-import be.entity.Client;
-import be.entity.Departament;
 import be.entity.Proiect;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -17,21 +15,7 @@ public interface ProiectDao extends CrudRepository<Proiect, Integer> {
 
     Proiect findProiectByNume(String nume);
 
-    Proiect findProiectByClient(Client client);
-
-    Proiect findProiectByDepartament(Departament departament);
-
-    Proiect findAllByID(Integer id);
-
-    Proiect findProiectByID(Integer id);
-
     List<Proiect> findAll();
-
-    void deleteProiectByNume(String nume);
-
-    void deleteProiectByClient(Client client);
-
-    void deleteProiectByDepartament(Departament departament);
 
     @Transactional
     @Modifying

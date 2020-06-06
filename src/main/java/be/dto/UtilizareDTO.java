@@ -7,36 +7,24 @@ public class UtilizareDTO implements Serializable {
 
     private Integer ID;
     private String username;
-    private Integer idLoc;
-    //private Integer idDesk;
-    private Date startDate;
-    private Date finalDate;
+    private String position;
+    private String startDate;
+    private String finalDate;
 
-    @Override
-    public String toString() {
-        return "UtilizareDTO{" +
-                "ID=" + ID +
-                ", username='" + username + '\'' +
-                ", idLoc=" + idLoc +
-                ", startDate=" + startDate +
-                ", finalDate=" + finalDate +
-                '}';
+    public String getPosition() {
+        return position;
     }
 
-    public UtilizareDTO(Integer ID, String username, Integer idLoc, Date startDate, Date finalDate) {
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public UtilizareDTO(Integer ID, String username, String position, String startDate, String finalDate) {
         this.ID = ID;
         this.username = username;
-        this.idLoc = idLoc;
+        this.position = position;
         this.startDate = startDate;
         this.finalDate = finalDate;
-    }
-
-    public Integer getIdLoc() {
-        return idLoc;
-    }
-
-    public void setIdLoc(Integer idLoc) {
-        this.idLoc = idLoc;
     }
 
     public Integer getID() {
@@ -55,19 +43,19 @@ public class UtilizareDTO implements Serializable {
         this.username = username;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getFinalDate() {
+    public String getFinalDate() {
         return finalDate;
     }
 
-    public void setFinalDate(Date finalDate) {
+    public void setFinalDate(String finalDate) {
         this.finalDate = finalDate;
     }
 

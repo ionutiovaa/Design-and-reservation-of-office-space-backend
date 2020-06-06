@@ -4,7 +4,9 @@ import be.entity.types.StareLoc;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -29,6 +31,17 @@ public class Loc implements Serializable {
     @JoinColumn(name = "id_etaj", referencedColumnName = "ID")
     private Etaj etaj;
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Utilizare> utilizari = new ArrayList<>();
+
+    public Loc(String pozitie, String qrCode, Integer value, Etaj etaj, List<Utilizare> utilizari) {
+        this.pozitie = pozitie;
+        this.qrCode = qrCode;
+        this.value = value;
+        this.etaj = etaj;
+        this.utilizari = utilizari;
+    }
+
     /*@Column(name = "stare_loc")
     @Enumerated(EnumType.STRING)
     private StareLoc stareLoc;*/
@@ -37,11 +50,11 @@ public class Loc implements Serializable {
     @JoinColumn(name = "pozitie", referencedColumnName = "ID")
     private Pozitie pozitie;*/
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    /*@ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "locuri_utilizari",
             joinColumns = @JoinColumn(name = "loc_id"),
             inverseJoinColumns = @JoinColumn(name = "utilizare_id"))
-    private Set<Utilizare> utilizari = new HashSet<>();
+    private Set<Utilizare> utilizari = new HashSet<>();*/
 
     public Integer getID() {
         return ID;
@@ -59,35 +72,40 @@ public class Loc implements Serializable {
         this.qrCode = qrCode;
     }
 
-    public Set<Utilizare> getUtilizari() {
+    /*public Set<Utilizare> getUtilizari() {
         return utilizari;
     }
 
     public void setUtilizari(Set<Utilizare> utilizari) {
         this.utilizari = utilizari;
-    }
+    }*/
 
     public Loc() {
     }
 
-    @Override
-    public String toString() {
-        return "Loc{" +
-                "ID=" + ID +
-                ", pozitie='" + pozitie + '\'' +
-                ", qrCode='" + qrCode + '\'' +
-                ", value=" + value +
-                ", utilizari=" + utilizari +
-                '}';
+    public Etaj getEtaj() {
+        return etaj;
     }
 
-    public Loc(String pozitie, String qrCode, Integer value, Etaj etaj, Set<Utilizare> utilizari) {
+    public void setEtaj(Etaj etaj) {
+        this.etaj = etaj;
+    }
+
+    public List<Utilizare> getUtilizari() {
+        return utilizari;
+    }
+
+    public void setUtilizari(List<Utilizare> utilizari) {
+        this.utilizari = utilizari;
+    }
+
+    /*public Loc(String pozitie, String qrCode, Integer value, Etaj etaj, Set<Utilizare> utilizari) {
         this.pozitie = pozitie;
         this.qrCode = qrCode;
         this.value = value;
         this.etaj = etaj;
         this.utilizari = utilizari;
-    }
+    }*/
 
     public String getPozitie() {
         return pozitie;
