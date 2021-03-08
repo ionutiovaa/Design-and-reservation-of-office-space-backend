@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="init locUtilizari">
+      <change afterPath="$PROJECT_DIR$/.idea/Licentabe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
@@ -42,6 +45,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/service/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/service/ClientServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/service/DepartamentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/service/DepartamentServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/be/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/service/MailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" afterDir="false" />
@@ -779,6 +783,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593272842083" />
@@ -806,8 +811,10 @@
   </component>
   <component name="RunManager" selected="Application.C">
     <configuration name="C" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="be.C" />
-      <module name="Licentabe_main" />
+      <module name="Licentabe.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="be.*" />
@@ -1137,6 +1144,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added jwt token" />
