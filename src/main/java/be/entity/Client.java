@@ -19,7 +19,7 @@ public class Client implements Serializable {
 
     @Override
     public String toString() {
-        return "Client{" +
+        return "Client{ " +
                 "ID=" + ID +
                 ", nume='" + nume + '\'' +
                 '}';
