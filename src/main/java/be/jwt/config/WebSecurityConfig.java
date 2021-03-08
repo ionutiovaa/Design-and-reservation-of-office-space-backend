@@ -51,9 +51,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/users/createUser",
-                        "/users/addUserToEchipa",
+                .antMatchers(
                         "/authenticate",
+                        "/users/createUser"
+                        /*"/locuri/getLocuri",
+                        "/locuri/getLocuriByEtaj",
+                        "/users/createUser",
+                        "/users/addUserToEchipa",
                         "/users/groups",
                         "/users/createUser",
                         "/users/changePassword",
@@ -91,6 +95,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/utilizari/createUtilizare",
                         "/utilizari/getUtilizariByDate",
                         "/utilizari/checkFree",
+                        "/utilizari/deleteUtilizare",
                         "/desks/getDesks",
                         "/desks/createDesk",
                         "/desks/deleteDesk",
@@ -98,7 +103,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/etaje/floorsCount",
                         "/etaje/deleteEtaj",
                         "/sedii/getDimensions",
-                        "/sedii/updateDimensions"
+                        "/sedii/updateDimensions"*/
 
                 )
                 .permitAll()

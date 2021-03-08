@@ -1,20 +1,27 @@
 package be.controller;
 
-import be.dto.AddUserToEchipaDTO;
-import be.dto.ChangePasswordDTO;
-import be.dto.EchipaDTO;
-import be.dto.UserDTO;
+import be.dto.*;
+import be.entity.Token;
 import be.entity.types.UserType;
 import be.exceptions.BusinessException;
+import be.jwt.model.JwtTokenUtil;
+import be.jwt.req.JwtRequest;
+import be.jwt.service.JwtService;
 import be.manager.remote.UserManagerRemote;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
+import java.util.Base64;
 import java.util.List;
 
 @RestController
@@ -23,6 +30,15 @@ public class UserController extends HttpServlet {
 
     @Autowired
     public UserManagerRemote userManagerRemote;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private JwtService userDetailsService;
+
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
 
     public UserController() {
     }
@@ -52,7 +68,17 @@ public class UserController extends HttpServlet {
         return jsonTranformer.writeValueAsString(listOfAllUsers);
     }
 
-    @PostMapping(path = "/createUser", produces = "application/json")
+    private void authenticate(String username, String password) throws Exception {
+        try {
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+        } catch (DisabledException e) {
+            throw new Exception("USER_DISABLED", e);
+        } catch (BadCredentialsException e) {
+            throw new Exception("INVALID_CREDENTIALS", e);
+        }
+    }
+
+    /*@PostMapping(path = "/createUser", produces = "application/json")
     public ResponseEntity<?> addUser(@RequestBody UserDTO userDTO){
         try {
             UserDTO user = userManagerRemote.insertUser(userDTO);
@@ -62,6 +88,49 @@ public class UserController extends HttpServlet {
         } catch (BusinessException e){
             return ResponseEntity.status(500).body(e.getMessage());
         }
+    }*/
+
+    @PostMapping(path = "/createUser", produces = "application/json")
+    public ResponseEntity<?> addUser(@RequestBody UserDTO userDTO){
+        try {
+            UserDTO user = userManagerRemote.insertUser(userDTO);
+            if (user == null)
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This user already exists.");
+            UserDTO loggedUser = createAuthenticationToken(new JwtRequest(user.getUsername(), user.getPassword()));
+            return ResponseEntity.ok(loggedUser);
+        } catch (BusinessException e){
+            return ResponseEntity.status(500).body(e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
+    public UserDTO createAuthenticationToken(JwtRequest authenticationRequest) throws Exception {
+        JwtRequest jwtRequest = new JwtRequest();
+        String encryptedPassword = Base64.getEncoder().encodeToString(authenticationRequest.getPassword().getBytes());
+        //authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+        authenticate(authenticationRequest.getUsername(), encryptedPassword);
+
+        final UserDetails userDetails = userDetailsService
+                .loadUserByUsername(authenticationRequest.getUsername());
+
+        final String token = jwtTokenUtil.generateToken(userDetails);
+        Token t = userDetailsService.insertToken(new TokenDTO(token, userDetails.getUsername()));
+
+        //UserDTO loggedUser = userManagerRemote.findUserByUsernameAndPassword(authenticationRequest.getUsername(),
+        //       authenticationRequest.getPassword());
+        UserDTO loggedUser = userManagerRemote.findUserByUsernameAndPassword(authenticationRequest.getUsername(),
+                encryptedPassword);
+
+        if(loggedUser != null) {
+            //Disable password
+            loggedUser.setPassword(null);
+            //Set token
+            loggedUser.setToken(t.getToken());
+        }
+        System.out.println(token);
+        return loggedUser;
     }
 
     @DeleteMapping(path = "/deleteUser", produces = "application/json")

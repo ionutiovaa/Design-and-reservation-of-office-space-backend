@@ -16,6 +16,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Base64;
+
 @RestController
 @CrossOrigin
 public class JwtAuthenticationController {
@@ -33,7 +35,9 @@ public class JwtAuthenticationController {
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
         JwtRequest jwtRequest = new JwtRequest();
-        authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+        String encryptedPassword = Base64.getEncoder().encodeToString(authenticationRequest.getPassword().getBytes());
+        //authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+        authenticate(authenticationRequest.getUsername(), encryptedPassword);
 
         final UserDetails userDetails = userDetailsService
                 .loadUserByUsername(authenticationRequest.getUsername());
@@ -41,8 +45,10 @@ public class JwtAuthenticationController {
         final String token = jwtTokenUtil.generateToken(userDetails);
         Token t = userDetailsService.insertToken(new TokenDTO(token, userDetails.getUsername()));
 
+        //UserDTO loggedUser = userManagerRemote.findUserByUsernameAndPassword(authenticationRequest.getUsername(),
+         //       authenticationRequest.getPassword());
         UserDTO loggedUser = userManagerRemote.findUserByUsernameAndPassword(authenticationRequest.getUsername(),
-                authenticationRequest.getPassword());
+                encryptedPassword);
 
         if(loggedUser != null) {
             //Disable password

@@ -19,6 +19,7 @@ import be.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Logger;
@@ -58,8 +59,27 @@ public class UserManager implements UserManagerRemote {
         return dtoPersisted;
     }
 
+    //@Override
+    /*public UserDTO insertUser(UserDTO userDTO) throws BusinessException {
+        User userFounded = userDao.findUserByUsername(userDTO.getUsername());
+        if (userFounded != null)
+            return null;
+        User user = createUserToInsert(userDTO);
+        User persistedUser = userDao.save(user);
+        UserDTO dtoPersisted = UserDTOEntityMapper.getDTOFromUser(persistedUser);
+        String name = userDTO.getFirstName() + " " + userDTO.getLastName();
+        Mail mail = new Mail(userDTO.getEmail(), "Organizare birouri", "Hello, " + name + "\n" +
+                "Welcome to Organizare birouri!\n" +
+                "Thank you for choosing to use this application!\n" +
+                "Enjoy it!");
+        MailService.sendMail(mail);
+        return dtoPersisted;
+    }*/
+
     private User createUserToInsert(UserDTO userDTO){
-        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getMobileNumber(), userDTO.getEmail(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getUserType());
+        String encryptedPassword = Base64.getEncoder().encodeToString(userDTO.getPassword().getBytes());
+        //User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getMobileNumber(), userDTO.getEmail(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getUserType());
+        User user = new User(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getMobileNumber(), userDTO.getEmail(), userDTO.getUsername(), encryptedPassword, userDTO.getUserType());
         if (userDTO.getEchipe() != null)
             user.setEchipe(EchipaDTOEntityMapper.getAllEchipeSetFromDTO(userDTO.getEchipe()));
         return user;
@@ -95,10 +115,13 @@ public class UserManager implements UserManagerRemote {
         User user = userDao.findAllByID(changePasswordDTO.getUserId());
         if (user == null)
             throw new BusinessException("Not found", "This username doesn't exists.");
-        if (user.getPassword().equals(changePasswordDTO.getOldPassword())){
+        byte[] decodedBytes = Base64.getDecoder().decode(user.getPassword());
+        String decodedPassword = new String(decodedBytes);
+        if (decodedPassword.equals(changePasswordDTO.getOldPassword())){
             // Change password;
-            user.setPassword(changePasswordDTO.getNewPassword());
-            int updated = this.userDao.updatePassword(user.getID(), changePasswordDTO.getNewPassword());
+            String encodedNewPassword = Base64.getEncoder().encodeToString(changePasswordDTO.getNewPassword().getBytes());
+            user.setPassword(encodedNewPassword);
+            int updated = this.userDao.updatePassword(user.getID(), encodedNewPassword);
             return UserDTOEntityMapper.getDTOCompleteFromUser(user);
         }
         else throw new BusinessException("Password error", "The old password is wrong");

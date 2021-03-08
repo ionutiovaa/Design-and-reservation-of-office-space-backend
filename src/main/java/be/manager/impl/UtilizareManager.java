@@ -45,7 +45,7 @@ public class UtilizareManager implements UtilizareManagerRemote {
             return "This schedule exists already";
 
 
-        if (user.getUserType().equals(UserType.ADMINISTRATOR.toString())){
+        if (user.getUserType().equals(UserType.ADMINISTRATOR)){
             String name = user.getFirstName() + " " + user.getLastName();
             MailService.sendMail(new Mail(user.getEmail(), "Organizare birouri", "Hello, " + name + "\n" +
                     "The office was booked in the interval: " + utilizareDTO.getStartDate() + " - " + utilizareDTO.getFinalDate() + "!\n" +
@@ -82,9 +82,10 @@ public class UtilizareManager implements UtilizareManagerRemote {
         Loc loc = locDao.findLocByPozitie(forGetSchedulesDTO.getPosition());
         List<String> allStartDates = utilizareDao.findAllSchedulesStartDate(forGetSchedulesDTO.getDate(), loc.getID());
         List<String> allEndDates = utilizareDao.findAllSchedulesEndDate(forGetSchedulesDTO.getDate(), loc.getID());
+        List<Integer> allUsersIds = utilizareDao.getAllUserIds(forGetSchedulesDTO.getDate(), loc.getID());
         List<SchedulesDTO> schedulesDTOList = new ArrayList<>();
         for (int i = 0; i < allStartDates.size(); i++) {
-            schedulesDTOList.add(new SchedulesDTO(allStartDates.get(i), allEndDates.get(i)));
+            schedulesDTOList.add(new SchedulesDTO(allStartDates.get(i), allEndDates.get(i), allUsersIds.get(i)));
         }
         return schedulesDTOList;
     }
@@ -98,6 +99,24 @@ public class UtilizareManager implements UtilizareManagerRemote {
         if (id.size() == 0)
             return true;
         return false;
+    }
+
+    @Override
+    public Boolean deleteUtilizare(UtilizareDTO utilizareDTO) throws BusinessException, ParseException {
+        User user = userDao.findUserByUsername(utilizareDTO.getUsername());
+        Loc loc = locDao.findLocByPozitie(utilizareDTO.getPosition());
+        Date startDatee = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(utilizareDTO.getStartDate());
+        //Date endDatee = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(utilizareDTO.getFinalDate());
+        try{
+            Utilizare utilizare = utilizareDao.getUtilizareByStartDateAndLocAndUser_ID(startDatee, loc, user.getID());
+            utilizareDao.deleteFromLocuriUtilizariByUtilizare_id(utilizare.getID());
+            utilizareDao.deleteUtilizareByID(utilizare.getID());
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
 }

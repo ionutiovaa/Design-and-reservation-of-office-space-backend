@@ -42,11 +42,23 @@ public class UtilizareController {
         }
     }
 
+    /*@PostMapping(path = "/getUtilizariByDate", produces = "application/json")
+    public String getUtilizariByDateAndDesk(@RequestBody ForGetSchedulesDTO forGetSchedulesDTO) throws IOException, BusinessException {
+        List<SchedulesDTO> listOfAllSchedules = this.utilizareManagerRemote.findAllSchedules(forGetSchedulesDTO);
+        ObjectMapper jsonTransformer = new ObjectMapper();
+        return jsonTransformer.writeValueAsString(listOfAllSchedules);
+    }*/
+
     @PostMapping(path = "/getUtilizariByDate", produces = "application/json")
     public String getUtilizariByDateAndDesk(@RequestBody ForGetSchedulesDTO forGetSchedulesDTO) throws IOException, BusinessException {
         List<SchedulesDTO> listOfAllSchedules = this.utilizareManagerRemote.findAllSchedules(forGetSchedulesDTO);
         ObjectMapper jsonTransformer = new ObjectMapper();
         return jsonTransformer.writeValueAsString(listOfAllSchedules);
+    }
+
+    @PostMapping(path = "/deleteUtilizare", produces = "application/json")
+    public ResponseEntity<?> deleteUtilizare(@RequestBody UtilizareDTO utilizareDTO) throws ParseException, BusinessException {
+        return new ResponseEntity<Boolean>(utilizareManagerRemote.deleteUtilizare(utilizareDTO), HttpStatus.OK);
     }
 
     @PostMapping(path = "/checkFree", produces = "application/json")

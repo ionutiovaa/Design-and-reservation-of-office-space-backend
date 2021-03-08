@@ -4,10 +4,7 @@ import be.dto.UserDTO;
 import be.entity.Echipa;
 import be.entity.User;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class UserDTOEntityMapper {
 
@@ -45,7 +42,9 @@ public class UserDTOEntityMapper {
             userDTO.setMobileNumber(user.getMobileNumber());
             userDTO.setEmail(user.getEmail());
             userDTO.setUsername(user.getUsername());
-            userDTO.setPassword(user.getPassword());
+            byte[] decodedPass = Base64.getDecoder().decode(user.getPassword());
+            //userDTO.setPassword(user.getPassword());
+            userDTO.setPassword(new String(decodedPass));
             userDTO.setEchipe(EchipaDTOEntityMapper.getAllEchipeDTOSetFromEchipe(user.getEchipe()));
             userDTO.setUserType(user.getUserType());
             //userDTO.setEchipe(user.getEchipe());

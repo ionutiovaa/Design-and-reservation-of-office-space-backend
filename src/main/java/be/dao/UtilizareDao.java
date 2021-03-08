@@ -1,6 +1,7 @@
 package be.dao;
 
 import be.entity.Loc;
+import be.entity.User;
 import be.entity.Utilizare;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -30,6 +31,12 @@ public interface UtilizareDao extends CrudRepository<Utilizare, Integer> {
             @Param("id_loc") Integer id_loc
     );
 
+    @Query(nativeQuery = true, value = "SELECT user from utilizari where id_loc = :id_loc and DATE_FORMAT(start_date, '%Y-%m-%d') = :selected_date")
+    List<Integer> getAllUserIds(
+            @Param("selected_date") String selected_date,
+            @Param("id_loc") Integer id_loc
+    );
+
     @Query(nativeQuery = true, value = "delete from utilizari where user = :user_id")
     @Modifying
     @Transactional
@@ -44,5 +51,15 @@ public interface UtilizareDao extends CrudRepository<Utilizare, Integer> {
     Integer deleteFromLocuriUtilizariByUtilizare_id(@Param("id") Integer id);
 
     List<Utilizare> findAllByLocAndStartDateIsLessThanAndFinalDateIsGreaterThan(Loc id_loc, Date final_date, Date start_date);
+
+    Utilizare getUtilizareByStartDateAndLocAndUser_ID(Date start_date, Loc id_loc, Integer user);
+
+    @Transactional
+    @Modifying
+    void deleteUtilizareByID(Integer id);
+
+
+
+    Utilizare getUtilizareByFinalDateAndStartDateAndLocAndUser(Date final_date, Date start_date, Loc id_loc, User user);
 
 }

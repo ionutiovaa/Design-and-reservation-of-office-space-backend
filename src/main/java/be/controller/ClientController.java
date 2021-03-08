@@ -93,12 +93,4 @@ public class ClientController {
         }
     }
 
-    @GetMapping(path="/", produces = "application/json")
-    public String get()
-    {
-        return "HI";
-    }
-
-
-
 }

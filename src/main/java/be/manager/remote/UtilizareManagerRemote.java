@@ -17,4 +17,6 @@ public interface UtilizareManagerRemote {
 
     Boolean checkFree(UtilizareDTO utilizareDTO) throws BusinessException, ParseException;
 
+    Boolean deleteUtilizare(UtilizareDTO utilizareDTO) throws BusinessException, ParseException;
+
 }
