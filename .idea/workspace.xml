@@ -5,57 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f462ffdc-5a96-4a84-b22e-1f1b7b1741fd" name="Default Changelist" comment="init locUtilizari">
-      <change afterPath="$PROJECT_DIR$/.idea/Licentabe.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/EtajController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/EtajController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/JwtAuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/JwtAuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/LocController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/LocController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/controller/UtilizareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/controller/UtilizareController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/ClientDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/ClientDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/DepartamentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/DepartamentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/EchipaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/EchipaDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/EtajDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/EtajDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/LocDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/LocDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/ProiectDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/ProiectDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/SediuDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/SediuDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/TokenDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/TokenDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dao/UtilizareDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dao/UtilizareDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dto/SchedulesDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dto/SchedulesDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dto/UtilizareDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dto/UtilizareDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UserDTOEntityMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UserDTOEntityMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UtilizareDTOEntityMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/dtoEntityMappers/UtilizareDTOEntityMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/jwt/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/DepartamentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/DepartamentManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/EchipaManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/EchipaManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/LocManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/LocManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/ProiectManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/ProiectManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/TokenManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/TokenManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UserManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UtilizareManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/impl/UtilizareManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/manager/remote/UtilizareManagerRemote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/manager/remote/UtilizareManagerRemote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/service/ClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/service/ClientServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/service/DepartamentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/service/DepartamentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/be/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/be/service/MailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/JwtAuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/controller/UtilizareController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dao/UtilizareDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dto/SchedulesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dto/SchedulesDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UserDTOEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/dtoEntityMappers/UserDTOEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/jwt/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/impl/UtilizareManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/manager/remote/UtilizareManagerRemote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
